@@ -520,7 +520,65 @@ def keys_chords_callback(call):
 
             bot.send_photo(call.message.chat.id, Abm)
             Abm.close()
+    if call.message:
+        if call.data == 'A#p':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А#/Bb (Ля диез / Си бемоль)')
 
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А#/Bb (Ля диез / Си бемоль)")
+
+            Bbchordsmarkup = types.InlineKeyboardMarkup(row_width=3)
+
+            Bbchord1 = types.InlineKeyboardButton("A#", callback_data="Bb_major")
+            Bbchord2 = types.InlineKeyboardButton("A#m", callback_data="Bb_minor")
+            Bbchord3 = types.InlineKeyboardButton("A#5", callback_data="Bb5")
+            Bbchord4 = types.InlineKeyboardButton("A#6", callback_data="Bb6")
+            Bbchord5 = types.InlineKeyboardButton("A#6 add9", callback_data="Bb6_9")
+            Bbchord6 = types.InlineKeyboardButton("A#7", callback_data="Bb7")
+            Bbchord7 = types.InlineKeyboardButton("A# maj7", callback_data="Bb_maj7")
+            Bbchord8 = types.InlineKeyboardButton("A# maj9", callback_data="Bb_maj9")
+            Bbchord9 = types.InlineKeyboardButton("A#7-5", callback_data="Bb7-5")
+            Bbchord10 = types.InlineKeyboardButton("A#7+5", callback_data="Bb7+5")
+            Bbchord11 = types.InlineKeyboardButton("A#9", callback_data="Bb9")
+            Bbchord12 = types.InlineKeyboardButton("A#11", callback_data="Bb11")
+            Bbchord13 = types.InlineKeyboardButton("A#13", callback_data="Bb13")
+            Bbchord14 = types.InlineKeyboardButton("A# aug", callback_data="Bb_aug")
+            Bbchord15 = types.InlineKeyboardButton("A# aug7", callback_data="Bb_aug7")
+            Bbchord16 = types.InlineKeyboardButton("A# dim", callback_data="Bb_dim")
+            Bbchord17 = types.InlineKeyboardButton("A# dim7", callback_data="Bb_dim7")
+            Bbchord18 = types.InlineKeyboardButton("A#m6", callback_data="Bbm6")
+            Bbchord19 = types.InlineKeyboardButton("A#m7", callback_data="Bbm7")
+            Bbchord20 = types.InlineKeyboardButton("A#m7(b5)", callback_data="Bbm7b5")
+            Bbchord21 = types.InlineKeyboardButton("A#m9", callback_data="Bbm9")
+            Bbchord22 = types.InlineKeyboardButton("A#m11", callback_data="Bbm11")
+            Bbchord23 = types.InlineKeyboardButton("A#m13", callback_data="Bbm13")
+            Bbchord24 = types.InlineKeyboardButton("A#m maj7", callback_data="Bbm_maj7")
+            Bbchord25 = types.InlineKeyboardButton("A# add2", callback_data="Bb_add2")
+            Bbchord26 = types.InlineKeyboardButton("A# add9", callback_data="Bb_add9")
+            Bbchord27 = types.InlineKeyboardButton("A# sus2", callback_data="Bb_sus2")
+            Bbchord28 = types.InlineKeyboardButton("A# sus4", callback_data="Bb_sus4")
+
+            Bbchordsmarkup.add(Bbchord1, Bbchord2, Bbchord3, Bbchord4, Bbchord5, Bbchord6, Bbchord7, Bbchord8, Bbchord9,
+                               Bbchord10, Bbchord11,
+                               Bbchord12,
+                               Bbchord13, Bbchord14, Bbchord15, Bbchord16, Bbchord17, Bbchord18, Bbchord19, Bbchord20,
+                               Bbchord21, Bbchord22,
+                               Bbchord23,
+                               Bbchord24, Bbchord25, Bbchord26, Bbchord27, Bbchord28)
+
+            bot.send_message(call.message.chat.id, 'Выберите аккорд:', reply_markup=Bbchordsmarkup)
+
+    if call.message:
+        if call.data == 'Bb_major':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А# / Bb major(Ля диез / Си бемоль мажор)')
+
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А# / Bb major(Ля диез / Си бемоль мажор)")
+
+            Bb_majorp = open('bot_files/p_chords/C/c.png')
+
+            bot.send_photo(call.message.chat.id, Bb_majorp)
+            Bb_majorp.close()
 
     if call.message:
         if call.data == 'Ap':
@@ -877,64 +935,6 @@ def keys_chords_callback(call):
             a_sus4p.close()
 
 
-    if call.message:
-        if call.data == 'A#p':
-            bot.send_message(call.message.chat.id, 'Вы выбрали А#/Bb (Ля диез / Си бемоль)')
-
-            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали А#/Bb (Ля диез / Си бемоль)")
-
-            Bbchordsmarkup = types.InlineKeyboardMarkup(row_width=3)
-
-            Bbchord1 = types.InlineKeyboardButton("A#", callback_data="Bb_major")
-            Bbchord2 = types.InlineKeyboardButton("A#m", callback_data="Bb_minor")
-            Bbchord3 = types.InlineKeyboardButton("A#5", callback_data="Bb5")
-            Bbchord4 = types.InlineKeyboardButton("A#6", callback_data="Bb6")
-            Bbchord5 = types.InlineKeyboardButton("A#6 add9", callback_data="Bb6_9")
-            Bbchord6 = types.InlineKeyboardButton("A#7", callback_data="Bb7")
-            Bbchord7 = types.InlineKeyboardButton("A# maj7", callback_data="Bb_maj7")
-            Bbchord8 = types.InlineKeyboardButton("A# maj9", callback_data="Bb_maj9")
-            Bbchord9 = types.InlineKeyboardButton("A#7-5", callback_data="Bb7-5")
-            Bbchord10 = types.InlineKeyboardButton("A#7+5", callback_data="Bb7+5")
-            Bbchord11 = types.InlineKeyboardButton("A#9", callback_data="Bb9")
-            Bbchord12 = types.InlineKeyboardButton("A#11", callback_data="Bb11")
-            Bbchord13 = types.InlineKeyboardButton("A#13", callback_data="Bb13")
-            Bbchord14 = types.InlineKeyboardButton("A# aug", callback_data="Bb_aug")
-            Bbchord15 = types.InlineKeyboardButton("A# aug7", callback_data="Bb_aug7")
-            Bbchord16 = types.InlineKeyboardButton("A# dim", callback_data="Bb_dim")
-            Bbchord17 = types.InlineKeyboardButton("A# dim7", callback_data="Bb_dim7")
-            Bbchord18 = types.InlineKeyboardButton("A#m6", callback_data="Bbm6")
-            Bbchord19 = types.InlineKeyboardButton("A#m7", callback_data="Bbm7")
-            Bbchord20 = types.InlineKeyboardButton("A#m7(b5)", callback_data="Bbm7b5")
-            Bbchord21 = types.InlineKeyboardButton("A#m9", callback_data="Bbm9")
-            Bbchord22 = types.InlineKeyboardButton("A#m11", callback_data="Bbm11")
-            Bbchord23 = types.InlineKeyboardButton("A#m13", callback_data="Bbm13")
-            Bbchord24 = types.InlineKeyboardButton("A#m maj7", callback_data="Bbm_maj7")
-            Bbchord25 = types.InlineKeyboardButton("A# add2", callback_data="Bb_add2")
-            Bbchord26 = types.InlineKeyboardButton("A# add9", callback_data="Bb_add9")
-            Bbchord27 = types.InlineKeyboardButton("A# sus2", callback_data="Bb_sus2")
-            Bbchord28 = types.InlineKeyboardButton("A# sus4", callback_data="Bb_sus4")
-
-            Bbchordsmarkup.add(Bbchord1, Bbchord2, Bbchord3, Bbchord4, Bbchord5, Bbchord6, Bbchord7, Bbchord8, Bbchord9, Bbchord10, Bbchord11,
-                             Bbchord12,
-                             Bbchord13, Bbchord14, Bbchord15, Bbchord16, Bbchord17, Bbchord18, Bbchord19, Bbchord20, Bbchord21, Bbchord22,
-                             Bbchord23,
-                             Bbchord24, Bbchord25, Bbchord26, Bbchord27, Bbchord28)
-
-            bot.send_message(call.message.chat.id, 'Выберите аккорд:', reply_markup=Bbchordsmarkup)
-
-
-    if call.message:
-        if call.data == 'Bb_major':
-            bot.send_message(call.message.chat.id, 'Вы выбрали А# / Bb major(Ля диез / Си бемоль мажор)')
-
-            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали А# / Bb major(Ля диез / Си бемоль мажор)")
-
-            Bb_majorp = open('bot_files/p_chords/C/c.png')
-
-            bot.send_photo(call.message.chat.id, Bb_majorp)
-            Bb_majorp.close()
 
 
 
