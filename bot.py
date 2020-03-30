@@ -932,7 +932,7 @@ def keys_chords_callback(call):
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
                                       text="Вы выбрали А# / Bb major(Ля диез / Си бемоль мажор)")
 
-            Bb_majorp = open('bot_files/p_chords/A#/a#.png')
+            Bb_majorp = open('bot_files/p_chords/c/c.png')
 
             bot.send_photo(call.message.chat.id, Bb_majorp)
             Bb_majorp.close()
