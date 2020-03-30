@@ -964,6 +964,7 @@ def keys_chords_callback(call):
 
 
 
+
 @bot.message_handler(commands=['g_chords'])
 def g_chord_rus(message):
     bot.send_message(message.chat.id, 'Функция находится в разработке')
