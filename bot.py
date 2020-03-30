@@ -521,8 +521,7 @@ def keys_chords_callback(call):
             bot.send_photo(call.message.chat.id, Abm)
             Abm.close()
 
-    #Chords
-    #A chords
+
     if call.message:
         if call.data == 'Ap':
             bot.send_message(call.message.chat.id, 'Вы выбрали А (Ля)')
