@@ -520,7 +520,8 @@ def keys_chords_callback(call):
 
             bot.send_photo(call.message.chat.id, Abm)
             Abm.close()
-
+    #pianoChords
+    #A Chords
 
     if call.message:
         if call.data == 'Ap':
@@ -849,7 +850,7 @@ def keys_chords_callback(call):
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
                                       text="Вы выбрали A_add9")
 
-            a_add9p = open('bot_files/p_chords/A/aadd9.png.png', 'rb')
+            a_add9p = open('bot_files/p_chords/A/aadd9.png', 'rb')
 
             bot.send_photo(call.message.chat.id, a_add9p)
             a_add9p.close()
@@ -886,34 +887,34 @@ def keys_chords_callback(call):
 
             Bbchordsmarkup = types.InlineKeyboardMarkup(row_width=3)
 
-            Bbchord1 = types.InlineKeyboardButton("A#", callback_data="Bb_major")
-            Bbchord2 = types.InlineKeyboardButton("A#m", callback_data="Bb_minor")
-            Bbchord3 = types.InlineKeyboardButton("A#5", callback_data="Bb5")
-            Bbchord4 = types.InlineKeyboardButton("A#6", callback_data="Bb6")
-            Bbchord5 = types.InlineKeyboardButton("A#6 add9", callback_data="Bb6_9")
-            Bbchord6 = types.InlineKeyboardButton("A#7", callback_data="Bb7")
-            Bbchord7 = types.InlineKeyboardButton("A# maj7", callback_data="Bb_maj7")
-            Bbchord8 = types.InlineKeyboardButton("A# maj9", callback_data="Bb_maj9")
-            Bbchord9 = types.InlineKeyboardButton("A#7-5", callback_data="Bb7-5")
-            Bbchord10 = types.InlineKeyboardButton("A#7+5", callback_data="Bb7+5")
-            Bbchord11 = types.InlineKeyboardButton("A#9", callback_data="Bb9")
-            Bbchord12 = types.InlineKeyboardButton("A#11", callback_data="Bb11")
-            Bbchord13 = types.InlineKeyboardButton("A#13", callback_data="Bb13")
-            Bbchord14 = types.InlineKeyboardButton("A# aug", callback_data="Bb_aug")
-            Bbchord15 = types.InlineKeyboardButton("A# aug7", callback_data="Bb_aug7")
-            Bbchord16 = types.InlineKeyboardButton("A# dim", callback_data="Bb_dim")
-            Bbchord17 = types.InlineKeyboardButton("A# dim7", callback_data="Bb_dim7")
-            Bbchord18 = types.InlineKeyboardButton("A#m6", callback_data="Bbm6")
-            Bbchord19 = types.InlineKeyboardButton("A#m7", callback_data="Bbm7")
-            Bbchord20 = types.InlineKeyboardButton("A#m7(b5)", callback_data="Bbm7b5")
-            Bbchord21 = types.InlineKeyboardButton("A#m9", callback_data="Bbm9")
-            Bbchord22 = types.InlineKeyboardButton("A#m11", callback_data="Bbm11")
-            Bbchord23 = types.InlineKeyboardButton("A#m13", callback_data="Bbm13")
-            Bbchord24 = types.InlineKeyboardButton("A#m maj7", callback_data="Bbm_maj7")
-            Bbchord25 = types.InlineKeyboardButton("A# add2", callback_data="Bb_add2")
-            Bbchord26 = types.InlineKeyboardButton("A# add9", callback_data="Bb_add9")
-            Bbchord27 = types.InlineKeyboardButton("A# sus2", callback_data="Bb_sus2")
-            Bbchord28 = types.InlineKeyboardButton("A# sus4", callback_data="Bb_sus4")
+            Bbchord1 = types.InlineKeyboardButton("A#", callback_data="A#_major")
+            Bbchord2 = types.InlineKeyboardButton("A#m", callback_data="A#_minor")
+            Bbchord3 = types.InlineKeyboardButton("A#5", callback_data="A#5")
+            Bbchord4 = types.InlineKeyboardButton("A#6", callback_data="A#6")
+            Bbchord5 = types.InlineKeyboardButton("A#6 add9", callback_data="A#6_9")
+            Bbchord6 = types.InlineKeyboardButton("A#7", callback_data="A#7")
+            Bbchord7 = types.InlineKeyboardButton("A# maj7", callback_data="A#_maj7")
+            Bbchord8 = types.InlineKeyboardButton("A# maj9", callback_data="A#_maj9")
+            Bbchord9 = types.InlineKeyboardButton("A#7-5", callback_data="A#7-5")
+            Bbchord10 = types.InlineKeyboardButton("A#7+5", callback_data="A#7+5")
+            Bbchord11 = types.InlineKeyboardButton("A#9", callback_data="A#9")
+            Bbchord12 = types.InlineKeyboardButton("A#11", callback_data="A#11")
+            Bbchord13 = types.InlineKeyboardButton("A#13", callback_data="A#13")
+            Bbchord14 = types.InlineKeyboardButton("A# aug", callback_data="A#_aug")
+            Bbchord15 = types.InlineKeyboardButton("A# aug7", callback_data="A#_aug7")
+            Bbchord16 = types.InlineKeyboardButton("A# dim", callback_data="A#_dim")
+            Bbchord17 = types.InlineKeyboardButton("A# dim7", callback_data="A#_dim7")
+            Bbchord18 = types.InlineKeyboardButton("A#m6", callback_data="A#m6")
+            Bbchord19 = types.InlineKeyboardButton("A#m7", callback_data="A#m7")
+            Bbchord20 = types.InlineKeyboardButton("A#m7(b5)", callback_data="A#m7b5")
+            Bbchord21 = types.InlineKeyboardButton("A#m9", callback_data="A#m9")
+            Bbchord22 = types.InlineKeyboardButton("A#m11", callback_data="A#m11")
+            Bbchord23 = types.InlineKeyboardButton("A#m13", callback_data="A#m13")
+            Bbchord24 = types.InlineKeyboardButton("A#m maj7", callback_data="A#m_maj7")
+            Bbchord25 = types.InlineKeyboardButton("A# add2", callback_data="A#_add2")
+            Bbchord26 = types.InlineKeyboardButton("A# add9", callback_data="A#_add9")
+            Bbchord27 = types.InlineKeyboardButton("A# sus2", callback_data="A#_sus2")
+            Bbchord28 = types.InlineKeyboardButton("A# sus4", callback_data="A#_sus4")
 
             Bbchordsmarkup.add(Bbchord1, Bbchord2, Bbchord3, Bbchord4, Bbchord5, Bbchord6, Bbchord7, Bbchord8, Bbchord9, Bbchord10, Bbchord11,
                              Bbchord12,
@@ -923,17 +924,339 @@ def keys_chords_callback(call):
 
             bot.send_message(call.message.chat.id, 'Выберите аккорд:', reply_markup=Bbchordsmarkup)
 
-
+    #A#Chords
     if call.message:
-        if call.data == 'Bb_major':
+        if call.data == 'A#_major':
             bot.send_message(call.message.chat.id, 'Вы выбрали А# / Bb major(Ля диез / Си бемоль мажор)')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
                                       text="Вы выбрали А# / Bb major(Ля диез / Си бемоль мажор)")
 
-            Bb_majorp = open('bot_files/p_chords/C/c.png', 'rb')
+            Bb_majorp = open('bot_files/p_chords/A#/a#.png', 'rb')
 
             bot.send_photo(call.message.chat.id, Bb_majorp)
             Bb_majorp.close()
+
+    if call.message:
+        if call.data == 'A#_minor':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А# / Bb minor(Ля диез / Си бемоль минор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А# / Bb minor(Ля диез / Си бемоль минор)")
+
+            Bb_minorp = open('bot_files/p_chords/A#/a#m.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bb_minorp)
+            Bb_minorp.close()
+
+    if call.message:
+        if call.data == 'A#5':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А#5/Bb5')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А#5/Bb5")
+
+            Bb5p = open('bot_files/p_chords/A#/b_flat_5.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bb5p)
+            Bb5p.close()
+
+    if call.message:
+        if call.data == 'A#6':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А#6/Bb6')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А#6/Bb6")
+
+            Bb6p = open('bot_files/p_chords/A#/b_flat_6.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bb6p)
+            Bb6p.close()
+
+    if call.message:
+        if call.data == 'A#6_9':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А#6 add9/Bb6 add9')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А#6 add9/Bb6 add9")
+
+            Bb6_9p = open('bot_files/p_chords/A#/b_flat_6_9.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bb6_9p)
+            Bb6_9p.close()
+
+    if call.message:
+        if call.data == 'A#7':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А#7/Bb7')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А#7/Bb7")
+
+            Bb7p = open('bot_files/p_chords/A#/b_flat_7.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bb7p)
+            Bb7p.close()
+
+    if call.message:
+        if call.data == 'A#_maj7':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А# maj7/Bb maj7')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А# maj7/Bb maj7")
+
+            Bb_maj7p = open('bot_files/p_chords/A#/b_flat_maj7.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bb_maj7p)
+            Bb_maj7p.close()
+
+    if call.message:
+        if call.data == 'A#_maj9':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А# maj9/Bb maj9')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А# maj9/Bb maj9")
+
+            Bb_maj9p = open('bot_files/p_chords/A#/b_flat_maj9.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bb_maj9p)
+            Bb_maj9p.close()
+
+    if call.message:
+        if call.data == 'A#7-5':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А#7-5/Bb7-5')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А#7-5/Bb7-5")
+
+            Bb7min5p = open('bot_files/p_chords/A#/b_flat_7minus5.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bb7min5p)
+            Bb7min5p.close()
+
+    if call.message:
+        if call.data == 'A#7+5':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А#7+5/Bb7+5')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А#7+5/Bb7+5")
+
+            Bb7plus5p = open('bot_files/p_chords/A#/b_flat_7plus5.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bb7plus5p)
+            Bb7plus5p.close()
+
+    if call.message:
+        if call.data == 'A#9':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А#9/Bb9')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А#9/Bb9")
+
+            Bb9p = open('bot_files/p_chords/A#/b_flat_9.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bb9p)
+            Bb9p.close()
+
+    if call.message:
+        if call.data == 'A#11':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А#11/Bb11')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А#11/Bb11")
+
+            Bb11p = open('bot_files/p_chords/A#/b_flat_11.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bb11p)
+            Bb11p.close()
+
+    if call.message:
+        if call.data == 'A#13':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А#13/Bb13')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А#13/Bb13")
+
+            Bb13p = open('bot_files/p_chords/A#/b_flat_13.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bb13p)
+            Bb13p.close()
+
+    if call.message:
+        if call.data == 'A#_aug':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А# aug/Bb aug')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А# aug/Bb aug")
+
+            Bb_augp = open('bot_files/p_chords/A#/b_flat_aug.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bb_augp)
+            Bb_augp.close()
+
+    if call.message:
+        if call.data == 'A#_aug7':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А# aug7/Bb aug7')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А# aug7/Bb aug7")
+
+            Bb_aug7p = open('bot_files/p_chords/A#/b_flat_aug7.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bb_aug7p)
+            Bb_aug7p.close()
+
+    if call.message:
+        if call.data == 'A#_dim':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А# dim/Bb dim')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А# dim/Bb dim")
+
+            Bb_dimp = open('bot_files/p_chords/A#/b_flat_dim.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bb_dimp)
+            Bb_dimp.close()
+
+    if call.message:
+        if call.data == 'A#_dim7':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А# dim7/Bb dim7')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А#9/Bb9")
+
+            Bb_dim7p = open('bot_files/p_chords/A#/b_flat_dim7.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bb_dim7p)
+            Bb_dim7p.close()
+
+    if call.message:
+        if call.data == 'A#m6':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А#m6/Bbm6')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А#m6/Bbm6")
+
+            Bbm6p = open('bot_files/p_chords/A#/b_flat_m6.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bbm6p)
+            Bbm6p.close()
+
+    if call.message:
+        if call.data == 'A#m7':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А#m7/Bbm7')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А#m7/Bbm7")
+
+            Bbm7p = open('bot_files/p_chords/A#/b_flat_m7.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bbm7p)
+            Bbm7p.close()
+
+    if call.message:
+        if call.data == 'A#m7b5':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А#m7b5/Bbm7b5')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А#m7b5/Bbm7b5")
+
+            Bbm7b5p = open('bot_files/p_chords/A#/b_flat_m7b5.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bbm7b5p)
+            Bbm7b5p.close()
+
+    if call.message:
+        if call.data == 'A#m9':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А#m9/Bbm9')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А#m9/Bbm9")
+
+            Bbm9p = open('bot_files/p_chords/A#/b_flat_m9.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bbm9p)
+            Bbm9p.close()
+
+    if call.message:
+        if call.data == 'A#m11':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А#m11/Bbm11')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А#m11/Bbm11")
+
+            Bbm11p = open('bot_files/p_chords/A#/b_flat_m11.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bbm11p)
+            Bbm11p.close()
+
+    if call.message:
+        if call.data == 'A#m13':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А#m13/Bbm13')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А#m13/Bbm13")
+
+            Bbm13p = open('bot_files/p_chords/A#/b_flat_m13.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bbm13p)
+            Bbm13p.close()
+
+    if call.message:
+        if call.data == 'A#m_maj7':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А#m maj7/Bbm maj7')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А#m maj7/Bbm maj7")
+
+            Bbm_maj7p = open('bot_files/p_chords/A#/b_flat_minmaj7.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bbm_maj7p)
+            Bbm_maj7p.close()
+
+    if call.message:
+        if call.data == 'A#_add2':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А# add2/Bb add2')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А# add2/Bb add2")
+
+            Bb_add2p = open('bot_files/p_chords/A#/b_flat_add2.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bb_add2p)
+            Bb_add2p.close()
+
+    if call.message:
+        if call.data == 'A#_add9':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А# add9/Bb add9')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А# add9/Bb add9")
+
+            Bb_add9p = open('bot_files/p_chords/A#/b_flat_add9.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bb_add9p)
+            Bb_add9p.close()
+
+    if call.message:
+        if call.data == 'A#_sus2':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А# sus2/Bb sus2')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А# sus2/Bb sus2")
+
+            Bb_sus2p = open('bot_files/p_chords/A#/b_flat_sus2.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bb_sus2p)
+            Bb_sus2p.close()
+
+    if call.message:
+        if call.data == 'A#_sus4':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А# sus4/Bb sus4')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А# sus4/Bb sus4")
+
+            Bb_sus4p = open('bot_files/p_chords/A#/b_flat_sus4.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Bb_sus4p)
+            Bb_sus4p.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
