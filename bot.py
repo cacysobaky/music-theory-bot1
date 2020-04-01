@@ -1523,10 +1523,10 @@ def keys_chords_callback(call):
             Bm11p.close()
 
     if call.message:
-        if call.data == 'B13':
-            bot.send_message(call.message.chat.id, 'Вы выбрали B13')
+        if call.data == 'Bm13':
+            bot.send_message(call.message.chat.id, 'Вы выбрали Bm13')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали B13")
+                                      text="Вы выбрали Bm13")
 
             Bm13p = open('bot_files/p_chords/B/bm13.png', 'rb')
 
@@ -1878,10 +1878,10 @@ def keys_chords_callback(call):
             Cm11p.close()
 
     if call.message:
-        if call.data == 'C13':
-            bot.send_message(call.message.chat.id, 'Вы выбрали C13')
+        if call.data == 'Cm13':
+            bot.send_message(call.message.chat.id, 'Вы выбрали Cm13')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали C13")
+                                      text="Вы выбрали Cm13")
 
             Cm13p = open('bot_files/p_chords/C/cm13.png', 'rb')
 
