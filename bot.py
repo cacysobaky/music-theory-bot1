@@ -1652,7 +1652,7 @@ def keys_chords_callback(call):
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
                                       text="Вы выбрали C minor (До минор)")
 
-            C_minor = open('bot_files/p_chords/c/cm.png', 'rb')
+            C_minor = open('bot_files/p_chords/C/cm.png', 'rb')
 
             bot.send_photo(call.message.chat.id, C_minor)
             C_minor.close()
@@ -1801,7 +1801,7 @@ def keys_chords_callback(call):
             C_aug7p.close()
 
     if call.message:
-        if call.data == 'B_dim':
+        if call.data == 'C_dim':
             bot.send_message(call.message.chat.id, 'Вы выбрали C dim')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
                                       text="Вы выбрали C dim")
@@ -1942,6 +1942,361 @@ def keys_chords_callback(call):
 
             bot.send_photo(call.message.chat.id, C_sus4p)
             C_sus4p.close()
+
+#C#chords
+    if call.message:
+        if call.data == 'C#p':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C# (До диез)')
+
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C# (До диез)")
+
+            Ddchordsmarkup = types.InlineKeyboardMarkup(row_width=3)
+
+            Ddchord1 = types.InlineKeyboardButton("C#", callback_data="C#_major")
+            Ddchord2 = types.InlineKeyboardButton("C#m", callback_data="C#_minor")
+            Ddchord3 = types.InlineKeyboardButton("C#5", callback_data="C#5")
+            Ddchord4 = types.InlineKeyboardButton("C#6", callback_data="C#6")
+            Ddchord5 = types.InlineKeyboardButton("C#6 add9", callback_data="C#6_9")
+            Ddchord6 = types.InlineKeyboardButton("C#7", callback_data="C#7")
+            Ddchord7 = types.InlineKeyboardButton("C# maj7", callback_data="C#_maj7")
+            Ddchord8 = types.InlineKeyboardButton("C# maj9", callback_data="C#_maj9")
+            Ddchord9 = types.InlineKeyboardButton("C#7-5", callback_data="C#7-5")
+            Ddchord10 = types.InlineKeyboardButton("C#7+5", callback_data="C#7+5")
+            Ddchord11 = types.InlineKeyboardButton("C#9", callback_data="C#9")
+            Ddchord12 = types.InlineKeyboardButton("C#11", callback_data="C#11")
+            Ddchord13 = types.InlineKeyboardButton("C#13", callback_data="C#13")
+            Ddchord14 = types.InlineKeyboardButton("C# aug", callback_data="C#_aug")
+            Ddchord15 = types.InlineKeyboardButton("C# aug7", callback_data="C#_aug7")
+            Ddchord16 = types.InlineKeyboardButton("C# dim", callback_data="C#_dim")
+            Ddchord17 = types.InlineKeyboardButton("C# dim7", callback_data="C#_dim7")
+            Ddchord18 = types.InlineKeyboardButton("C#m6", callback_data="C#m6")
+            Ddchord19 = types.InlineKeyboardButton("C#m7", callback_data="C#m7")
+            Ddchord20 = types.InlineKeyboardButton("C#m7(b5)", callback_data="C#m7b5")
+            Ddchord21 = types.InlineKeyboardButton("C#m9", callback_data="C#m9")
+            Ddchord22 = types.InlineKeyboardButton("C#m11", callback_data="C#m11")
+            Ddchord23 = types.InlineKeyboardButton("C#m13", callback_data="C#m13")
+            Ddchord24 = types.InlineKeyboardButton("C#m maj7", callback_data="C#m_maj7")
+            Ddchord25 = types.InlineKeyboardButton("C# add2", callback_data="C#_add2")
+            Ddchord26 = types.InlineKeyboardButton("C# add9", callback_data="C#_add9")
+            Ddchord27 = types.InlineKeyboardButton("C# sus2", callback_data="C#_sus2")
+            Ddchord28 = types.InlineKeyboardButton("C# sus4", callback_data="C#_sus4")
+
+            Ddchordsmarkup.add(Ddchord1, Ddchord2, Ddchord3, Ddchord4, Ddchord5, Ddchord6, Ddchord7, Ddchord8, Ddchord9, Ddchord10, Ddchord11,
+                             Ddchord12,
+                             Ddchord13, Ddchord14, Ddchord15, Ddchord16, Ddchord17, Ddchord18, Ddchord19, Ddchord20, Ddchord21, Ddchord22,
+                             Ddchord23,
+                             Ddchord24, Ddchord25, Ddchord26, Ddchord27, Ddchord28)
+
+            bot.send_message(call.message.chat.id, 'Выберите аккорд:', reply_markup=Ddchordsmarkup)
+
+    if call.message:
+        if call.data == 'C#_major':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C# major (До диез мажор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C# major (До диез мажор)")
+
+            Dd_majorp = open('bot_files/p_chords/C#/c#.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Dd_majorp)
+            Dd_majorp.close()
+
+    if call.message:
+        if call.data == 'C#_minor':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C# minor (До диез минор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C# minor (До диез минор)")
+
+            C_minor = open('bot_files/p_chords/C#/cm.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, C_minor)
+            C_minor.close()
+
+    if call.message:
+        if call.data == 'C#5':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C#5')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C#5")
+
+            Dd5p = open('bot_files/p_chords/C#/c#5.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Dd5p)
+            Dd5p.close()
+
+    if call.message:
+        if call.data == 'C#6':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C#6')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C#6")
+
+            Dd6p = open('bot_files/p_chords/C#/c#6.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Dd6p)
+            Dd6p.close()
+
+    if call.message:
+        if call.data == 'C#6_9':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C#6 add9 ')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C#6 add9")
+
+            Dd6add9p = open('bot_files/p_chords/C#/c#6_9.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Dd6add9p)
+            Dd6add9p.close()
+
+    if call.message:
+        if call.data == 'C#7':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C#7')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C#7")
+
+            Dd7p = open('bot_files/p_chords/C#/c#7.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Dd7p)
+            Dd7p.close()
+
+    if call.message:
+        if call.data == 'C#_maj7':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C# maj7')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C# maj7")
+
+            Dd_maj7p = open('bot_files/p_chords/C#/cmaj7.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Dd_maj7p)
+            Dd_maj7p.close()
+
+    if call.message:
+        if call.data == 'C#_maj9':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C# maj9')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C# maj9")
+
+            Dd_maj9p = open('bot_files/p_chords/C#/c#maj9.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Dd_maj9p)
+            Dd_maj9p.close()
+
+    if call.message:
+        if call.data == 'C#7-5':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C#7-5')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C#7-5")
+
+            Dd7min5p = open('bot_files/p_chords/C#/c#7minus5.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Dd7min5p)
+            Dd7min5p.close()
+
+    if call.message:
+        if call.data == 'C#7+5':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C#7+5')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C#7+5")
+
+            Dd7plus5p = open('bot_files/p_chords/C/c7plus5.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Dd7plus5p)
+            Dd7plus5p.close()
+
+    if call.message:
+        if call.data == 'C#9':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C#9')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C#9")
+
+            Dd9p = open('bot_files/p_chords/C#/c#9.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Dd9p)
+            Dd9p.close()
+
+    if call.message:
+        if call.data == 'C#11':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C#11')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C#11")
+
+            Dd11p = open('bot_files/p_chords/C#/c#11.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Dd11p)
+            Dd11p.close()
+
+    if call.message:
+        if call.data == 'C#13':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C#13')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C#13")
+
+            Dd13p = open('bot_files/p_chords/C#/c#13.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Dd13p)
+            Dd13p.close()
+
+    if call.message:
+        if call.data == 'C#_aug':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C# aug')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C# aug")
+
+            Dd_augp = open('bot_files/p_chords/C#/c#aug.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Dd_augp)
+            Dd_augp.close()
+
+    if call.message:
+        if call.data == 'C#_aug7':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C#_aug7')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C#_aug7")
+
+            Dd_aug7p = open('bot_files/p_chords/C#/c#aug7.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Dd_aug7p)
+            Dd_aug7p.close()
+
+    if call.message:
+        if call.data == 'C#_dim':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C# dim')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C# dim")
+
+            Dd_dimp = open('bot_files/p_chords/C#/c#dim.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Dd_dimp)
+            Dd_dimp.close()
+
+    if call.message:
+        if call.data == 'C#_dim7':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C# dim7')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C# dim7")
+
+            Dd_dim7p = open('bot_files/p_chords/C#/c#dim7.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Dd_dim7p)
+            Dd_dim7p.close()
+
+    if call.message:
+        if call.data == 'C#m6':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C#m6')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C#m6")
+
+            Ddm6p = open('bot_files/p_chords/C#/c#m6.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Ddm6p)
+            Ddm6p.close()
+
+    if call.message:
+        if call.data == 'C#m7':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C#m7')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C#m7")
+
+            Ddm7p = open('bot_files/p_chords/C#/c#m7.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Ddm7p)
+            Ddm7p.close()
+
+    if call.message:
+        if call.data == 'C#m7b5':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C#m7(b5)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C#m7(b5)")
+
+            Ddm7b5p = open('bot_files/p_chords/C#/c#m7b5.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Ddm7b5p)
+            Ddm7b5p.close()
+
+    if call.message:
+        if call.data == 'C#m9':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C#m9')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C#m9")
+
+            Ddm9p = open('bot_files/p_chords/C#/c#m9.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Ddm9p)
+            Ddm9p.close()
+
+    if call.message:
+        if call.data == 'C#m11':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C#m11')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C#m11")
+
+            Ddm11p = open('bot_files/p_chords/C#/c#m11.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Ddm11p)
+            Ddm11p.close()
+
+    if call.message:
+        if call.data == 'C#m13':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C#m13')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C#m13")
+
+            Ddm13p = open('bot_files/p_chords/C#/c#m13.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Ddm13p)
+            Ddm13p.close()
+
+    if call.message:
+        if call.data == 'C#m_maj7':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C#m maj7')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C#m maj7")
+
+            Ddm_maj7p = open('bot_files/p_chords/C#/c#minmaj7.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Ddm_maj7p)
+            Ddm_maj7p.close()
+
+    if call.message:
+        if call.data == 'C#_add2':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C# add2')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C# add2")
+
+            Dd_add2p = open('bot_files/p_chords/C#/c#add2.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Dd_add2p)
+            Dd_add2p.close()
+
+    if call.message:
+        if call.data == 'C#_add4':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C# add4')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C# add4")
+
+            Dd_add4p = open('bot_files/p_chords/C#/c#add4.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Dd_add4p)
+            Dd_add4p.close()
+
+    if call.message:
+        if call.data == 'C#_sus2':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C# sus2')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C# sus2")
+
+            Dd_sus2p = open('bot_files/p_chords/C#/c#sus2.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Dd_sus2p)
+            Dd_sus2p.close()
+
+    if call.message:
+        if call.data == 'C#_sus4':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C# sus4')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C# sus4")
+
+            Dd_sus4p = open('bot_files/p_chords/C#/c#sus4.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, Dd_sus4p)
+            Dd_sus4p.close()
 
 
 
