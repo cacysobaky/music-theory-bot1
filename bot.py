@@ -530,44 +530,44 @@ def keys_chords_callback(call):
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
                                       text="Вы выбрали А (Ля)")
 
-            Achordsmarkup = types.InlineKeyboardMarkup(row_width=3)
+            chordsmarkup = types.InlineKeyboardMarkup(row_width=3)
 
-            Achord1 = types.InlineKeyboardButton("A", callback_data="A_major")
-            Achord2 = types.InlineKeyboardButton("Am", callback_data="A_minor")
-            Achord3 = types.InlineKeyboardButton("A5", callback_data="A5")
-            Achord4 = types.InlineKeyboardButton("A6", callback_data="A6")
-            Achord5 = types.InlineKeyboardButton("A6 add9", callback_data="A6_9")
-            Achord6 = types.InlineKeyboardButton("A7", callback_data="A7")
-            Achord7 = types.InlineKeyboardButton("A maj7", callback_data="A_maj7")
-            Achord8 = types.InlineKeyboardButton("A maj9", callback_data="A_maj9")
-            Achord9 = types.InlineKeyboardButton("A7-5", callback_data="A7-5")
-            Achord10 = types.InlineKeyboardButton("A7+5", callback_data="A7+5")
-            Achord11 = types.InlineKeyboardButton("A9", callback_data="A9")
-            Achord12 = types.InlineKeyboardButton("A11", callback_data="A11")
-            Achord13 = types.InlineKeyboardButton("A13", callback_data="A13")
-            Achord14 = types.InlineKeyboardButton("A aug", callback_data="A_aug")
-            Achord15 = types.InlineKeyboardButton("A aug7", callback_data="A_aug7")
-            Achord16 = types.InlineKeyboardButton("A dim", callback_data="A_dim")
-            Achord17 = types.InlineKeyboardButton("A dim7", callback_data="A_dim7")
-            Achord18 = types.InlineKeyboardButton("Am6", callback_data="Am6")
-            Achord19 = types.InlineKeyboardButton("Am7", callback_data="Am7")
-            Achord20 = types.InlineKeyboardButton("Am7(b5)", callback_data="Am7b5")
-            Achord21 = types.InlineKeyboardButton("Am9", callback_data="Am9")
-            Achord22 = types.InlineKeyboardButton("Am11", callback_data="Am11")
-            Achord23 = types.InlineKeyboardButton("Am13", callback_data="Am13")
-            Achord24 = types.InlineKeyboardButton("Am maj7", callback_data="Am_maj7")
-            Achord25 = types.InlineKeyboardButton("A add2", callback_data="A_add2")
-            Achord26 = types.InlineKeyboardButton("A add9", callback_data="A_add9")
-            Achord27 = types.InlineKeyboardButton("A sus2", callback_data="A_sus2")
-            Achord28 = types.InlineKeyboardButton("A sus4", callback_data="A_sus4")
+            chord1 = types.InlineKeyboardButton("A", callback_data="A_major")
+            chord2 = types.InlineKeyboardButton("Am", callback_data="A_minor")
+            chord3 = types.InlineKeyboardButton("A5", callback_data="A5")
+            chord4 = types.InlineKeyboardButton("A6", callback_data="A6")
+            chord5 = types.InlineKeyboardButton("A6 add9", callback_data="A6_9")
+            chord6 = types.InlineKeyboardButton("A7", callback_data="A7")
+            chord7 = types.InlineKeyboardButton("A maj7", callback_data="A_maj7")
+            chord8 = types.InlineKeyboardButton("A maj9", callback_data="A_maj9")
+            chord9 = types.InlineKeyboardButton("A7-5", callback_data="A7-5")
+            chord10 = types.InlineKeyboardButton("A7+5", callback_data="A7+5")
+            chord11 = types.InlineKeyboardButton("A9", callback_data="A9")
+            chord12 = types.InlineKeyboardButton("A11", callback_data="A11")
+            chord13 = types.InlineKeyboardButton("A13", callback_data="A13")
+            chord14 = types.InlineKeyboardButton("A aug", callback_data="A_aug")
+            chord15 = types.InlineKeyboardButton("A aug7", callback_data="A_aug7")
+            chord16 = types.InlineKeyboardButton("A dim", callback_data="A_dim")
+            chord17 = types.InlineKeyboardButton("A dim7", callback_data="A_dim7")
+            chord18 = types.InlineKeyboardButton("Am6", callback_data="Am6")
+            chord19 = types.InlineKeyboardButton("Am7", callback_data="Am7")
+            chord20 = types.InlineKeyboardButton("Am7(b5)", callback_data="Am7b5")
+            chord21 = types.InlineKeyboardButton("Am9", callback_data="Am9")
+            chord22 = types.InlineKeyboardButton("Am11", callback_data="Am11")
+            chord23 = types.InlineKeyboardButton("Am13", callback_data="Am13")
+            chord24 = types.InlineKeyboardButton("Am maj7", callback_data="Am_maj7")
+            chord25 = types.InlineKeyboardButton("A add2", callback_data="A_add2")
+            chord26 = types.InlineKeyboardButton("A add9", callback_data="A_add9")
+            chord27 = types.InlineKeyboardButton("A sus2", callback_data="A_sus2")
+            chord28 = types.InlineKeyboardButton("A sus4", callback_data="A_sus4")
 
-            Achordsmarkup.add(Achord1, Achord2, Achord3, Achord4, Achord5, Achord6, Achord7, Achord8, Achord9, Achord10, Achord11,
-                             Achord12,
-                             Achord13, Achord14, Achord15, Achord16, Achord17, Achord18, Achord19, Achord20, Achord21, Achord22,
-                             Achord23,
-                             Achord24, Achord25, Achord26, Achord27, Achord28)
+            chordsmarkup.add(chord1, chord2, chord3, chord4, chord5, chord6, chord7, chord8, chord9, chord10, chord11,
+                             chord12,
+                             chord13, chord14, chord15, chord16, chord17, chord18, chord19, chord20, chord21, chord22,
+                             chord23,
+                             chord24, chord25, chord26, chord27, chord28)
 
-            bot.send_message(call.message.chat.id, 'Выберите аккорд:', reply_markup=Achordsmarkup)
+            bot.send_message(call.message.chat.id, 'Выберите аккорд:', reply_markup=chordsmarkup)
 
     if call.message:
         if call.data == 'A_major':
@@ -885,44 +885,44 @@ def keys_chords_callback(call):
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
                                       text="Вы выбрали А#/Bb (Ля диез / Си бемоль)")
 
-            Bbchordsmarkup = types.InlineKeyboardMarkup(row_width=3)
+            chordsmarkup = types.InlineKeyboardMarkup(row_width=3)
 
-            Bbchord1 = types.InlineKeyboardButton("A#", callback_data="A#_major")
-            Bbchord2 = types.InlineKeyboardButton("A#m", callback_data="A#_minor")
-            Bbchord3 = types.InlineKeyboardButton("A#5", callback_data="A#5")
-            Bbchord4 = types.InlineKeyboardButton("A#6", callback_data="A#6")
-            Bbchord5 = types.InlineKeyboardButton("A#6 add9", callback_data="A#6_9")
-            Bbchord6 = types.InlineKeyboardButton("A#7", callback_data="A#7")
-            Bbchord7 = types.InlineKeyboardButton("A# maj7", callback_data="A#_maj7")
-            Bbchord8 = types.InlineKeyboardButton("A# maj9", callback_data="A#_maj9")
-            Bbchord9 = types.InlineKeyboardButton("A#7-5", callback_data="A#7-5")
-            Bbchord10 = types.InlineKeyboardButton("A#7+5", callback_data="A#7+5")
-            Bbchord11 = types.InlineKeyboardButton("A#9", callback_data="A#9")
-            Bbchord12 = types.InlineKeyboardButton("A#11", callback_data="A#11")
-            Bbchord13 = types.InlineKeyboardButton("A#13", callback_data="A#13")
-            Bbchord14 = types.InlineKeyboardButton("A# aug", callback_data="A#_aug")
-            Bbchord15 = types.InlineKeyboardButton("A# aug7", callback_data="A#_aug7")
-            Bbchord16 = types.InlineKeyboardButton("A# dim", callback_data="A#_dim")
-            Bbchord17 = types.InlineKeyboardButton("A# dim7", callback_data="A#_dim7")
-            Bbchord18 = types.InlineKeyboardButton("A#m6", callback_data="A#m6")
-            Bbchord19 = types.InlineKeyboardButton("A#m7", callback_data="A#m7")
-            Bbchord20 = types.InlineKeyboardButton("A#m7(b5)", callback_data="A#m7b5")
-            Bbchord21 = types.InlineKeyboardButton("A#m9", callback_data="A#m9")
-            Bbchord22 = types.InlineKeyboardButton("A#m11", callback_data="A#m11")
-            Bbchord23 = types.InlineKeyboardButton("A#m13", callback_data="A#m13")
-            Bbchord24 = types.InlineKeyboardButton("A#m maj7", callback_data="A#m_maj7")
-            Bbchord25 = types.InlineKeyboardButton("A# add2", callback_data="A#_add2")
-            Bbchord26 = types.InlineKeyboardButton("A# add9", callback_data="A#_add9")
-            Bbchord27 = types.InlineKeyboardButton("A# sus2", callback_data="A#_sus2")
-            Bbchord28 = types.InlineKeyboardButton("A# sus4", callback_data="A#_sus4")
+            chord1 = types.InlineKeyboardButton("A#", callback_data="A#_major")
+            chord2 = types.InlineKeyboardButton("A#m", callback_data="A#_minor")
+            chord3 = types.InlineKeyboardButton("A#5", callback_data="A#5")
+            chord4 = types.InlineKeyboardButton("A#6", callback_data="A#6")
+            chord5 = types.InlineKeyboardButton("A#6 add9", callback_data="A#6_9")
+            chord6 = types.InlineKeyboardButton("A#7", callback_data="A#7")
+            chord7 = types.InlineKeyboardButton("A# maj7", callback_data="A#_maj7")
+            chord8 = types.InlineKeyboardButton("A# maj9", callback_data="A#_maj9")
+            chord9 = types.InlineKeyboardButton("A#7-5", callback_data="A#7-5")
+            chord10 = types.InlineKeyboardButton("A#7+5", callback_data="A#7+5")
+            chord11 = types.InlineKeyboardButton("A#9", callback_data="A#9")
+            chord12 = types.InlineKeyboardButton("A#11", callback_data="A#11")
+            chord13 = types.InlineKeyboardButton("A#13", callback_data="A#13")
+            chord14 = types.InlineKeyboardButton("A# aug", callback_data="A#_aug")
+            chord15 = types.InlineKeyboardButton("A# aug7", callback_data="A#_aug7")
+            chord16 = types.InlineKeyboardButton("A# dim", callback_data="A#_dim")
+            chord17 = types.InlineKeyboardButton("A# dim7", callback_data="A#_dim7")
+            chord18 = types.InlineKeyboardButton("A#m6", callback_data="A#m6")
+            chord19 = types.InlineKeyboardButton("A#m7", callback_data="A#m7")
+            chord20 = types.InlineKeyboardButton("A#m7(b5)", callback_data="A#m7b5")
+            chord21 = types.InlineKeyboardButton("A#m9", callback_data="A#m9")
+            chord22 = types.InlineKeyboardButton("A#m11", callback_data="A#m11")
+            chord23 = types.InlineKeyboardButton("A#m13", callback_data="A#m13")
+            chord24 = types.InlineKeyboardButton("A#m maj7", callback_data="A#m_maj7")
+            chord25 = types.InlineKeyboardButton("A# add2", callback_data="A#_add2")
+            chord26 = types.InlineKeyboardButton("A# add9", callback_data="A#_add9")
+            chord27 = types.InlineKeyboardButton("A# sus2", callback_data="A#_sus2")
+            chord28 = types.InlineKeyboardButton("A# sus4", callback_data="A#_sus4")
 
-            Bbchordsmarkup.add(Bbchord1, Bbchord2, Bbchord3, Bbchord4, Bbchord5, Bbchord6, Bbchord7, Bbchord8, Bbchord9, Bbchord10, Bbchord11,
-                             Bbchord12,
-                             Bbchord13, Bbchord14, Bbchord15, Bbchord16, Bbchord17, Bbchord18, Bbchord19, Bbchord20, Bbchord21, Bbchord22,
-                             Bbchord23,
-                             Bbchord24, Bbchord25, Bbchord26, Bbchord27, Bbchord28)
+            chordsmarkup.add(chord1, chord2, chord3, chord4, chord5, chord6, chord7, chord8, chord9, chord10, chord11,
+                             chord12,
+                             chord13, chord14, chord15, chord16, chord17, chord18, chord19, chord20, chord21, chord22,
+                             chord23,
+                             chord24, chord25, chord26, chord27, chord28)
 
-            bot.send_message(call.message.chat.id, 'Выберите аккорд:', reply_markup=Bbchordsmarkup)
+            bot.send_message(call.message.chat.id, 'Выберите аккорд:', reply_markup=chordsmarkup)
 
 
     if call.message:
@@ -1241,44 +1241,44 @@ def keys_chords_callback(call):
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
                                       text="Вы выбрали B (Си)")
 
-            Bchordsmarkup = types.InlineKeyboardMarkup(row_width=3)
+            chordsmarkup = types.InlineKeyboardMarkup(row_width=3)
 
-            Bchord1 = types.InlineKeyboardButton("B", callback_data="B_major")
-            Bchord2 = types.InlineKeyboardButton("Bm", callback_data="B_minor")
-            Bchord3 = types.InlineKeyboardButton("B5", callback_data="B5")
-            Bchord4 = types.InlineKeyboardButton("B6", callback_data="B6")
-            Bchord5 = types.InlineKeyboardButton("B6 add9", callback_data="B6_9")
-            Bchord6 = types.InlineKeyboardButton("B7", callback_data="B7")
-            Bchord7 = types.InlineKeyboardButton("B maj7", callback_data="B_maj7")
-            Bchord8 = types.InlineKeyboardButton("B maj9", callback_data="B_maj9")
-            Bchord9 = types.InlineKeyboardButton("B7-5", callback_data="B7-5")
-            Bchord10 = types.InlineKeyboardButton("B7+5", callback_data="B7+5")
-            Bchord11 = types.InlineKeyboardButton("B9", callback_data="B9")
-            Bchord12 = types.InlineKeyboardButton("B11", callback_data="B11")
-            Bchord13 = types.InlineKeyboardButton("B13", callback_data="B13")
-            Bchord14 = types.InlineKeyboardButton("B aug", callback_data="B_aug")
-            Bchord15 = types.InlineKeyboardButton("B aug7", callback_data="B_aug7")
-            Bchord16 = types.InlineKeyboardButton("B dim", callback_data="B_dim")
-            Bchord17 = types.InlineKeyboardButton("B dim7", callback_data="B_dim7")
-            Bchord18 = types.InlineKeyboardButton("Bm6", callback_data="Bm6")
-            Bchord19 = types.InlineKeyboardButton("Bm7", callback_data="Bm7")
-            Bchord20 = types.InlineKeyboardButton("Bm7(b5)", callback_data="Bm7b5")
-            Bchord21 = types.InlineKeyboardButton("Bm9", callback_data="Bm9")
-            Bchord22 = types.InlineKeyboardButton("Bm11", callback_data="Bm11")
-            Bchord23 = types.InlineKeyboardButton("Bm13", callback_data="Bm13")
-            Bchord24 = types.InlineKeyboardButton("Bm maj7", callback_data="Bm_maj7")
-            Bchord25 = types.InlineKeyboardButton("B add2", callback_data="B_add2")
-            Bchord26 = types.InlineKeyboardButton("B add9", callback_data="B_add9")
-            Bchord27 = types.InlineKeyboardButton("B sus2", callback_data="B_sus2")
-            Bchord28 = types.InlineKeyboardButton("B sus4", callback_data="B_sus4")
+            chord1 = types.InlineKeyboardButton("B", callback_data="B_major")
+            chord2 = types.InlineKeyboardButton("Bm", callback_data="B_minor")
+            chord3 = types.InlineKeyboardButton("B5", callback_data="B5")
+            chord4 = types.InlineKeyboardButton("B6", callback_data="B6")
+            chord5 = types.InlineKeyboardButton("B6 add9", callback_data="B6_9")
+            chord6 = types.InlineKeyboardButton("B7", callback_data="B7")
+            chord7 = types.InlineKeyboardButton("B maj7", callback_data="B_maj7")
+            chord8 = types.InlineKeyboardButton("B maj9", callback_data="B_maj9")
+            chord9 = types.InlineKeyboardButton("B7-5", callback_data="B7-5")
+            chord10 = types.InlineKeyboardButton("B7+5", callback_data="B7+5")
+            chord11 = types.InlineKeyboardButton("B9", callback_data="B9")
+            chord12 = types.InlineKeyboardButton("B11", callback_data="B11")
+            chord13 = types.InlineKeyboardButton("B13", callback_data="B13")
+            chord14 = types.InlineKeyboardButton("B aug", callback_data="B_aug")
+            chord15 = types.InlineKeyboardButton("B aug7", callback_data="B_aug7")
+            chord16 = types.InlineKeyboardButton("B dim", callback_data="B_dim")
+            chord17 = types.InlineKeyboardButton("B dim7", callback_data="B_dim7")
+            chord18 = types.InlineKeyboardButton("Bm6", callback_data="Bm6")
+            chord19 = types.InlineKeyboardButton("Bm7", callback_data="Bm7")
+            chord20 = types.InlineKeyboardButton("Bm7(b5)", callback_data="Bm7b5")
+            chord21 = types.InlineKeyboardButton("Bm9", callback_data="Bm9")
+            chord22 = types.InlineKeyboardButton("Bm11", callback_data="Bm11")
+            chord23 = types.InlineKeyboardButton("Bm13", callback_data="Bm13")
+            chord24 = types.InlineKeyboardButton("Bm maj7", callback_data="Bm_maj7")
+            chord25 = types.InlineKeyboardButton("B add2", callback_data="B_add2")
+            chord26 = types.InlineKeyboardButton("B add9", callback_data="B_add9")
+            chord27 = types.InlineKeyboardButton("B sus2", callback_data="B_sus2")
+            chord28 = types.InlineKeyboardButton("B sus4", callback_data="B_sus4")
 
-            Bchordsmarkup.add(Bchord1, Bchord2, Bchord3, Bchord4, Bchord5, Bchord6, Bchord7, Bchord8, Bchord9, Bchord10, Bchord11,
-                             Bchord12,
-                             Bchord13, Bchord14, Bchord15, Bchord16, Bchord17, Bchord18, Bchord19, Bchord20, Bchord21, Bchord22,
-                             Bchord23,
-                             Bchord24, Bchord25, Bchord26, Bchord27, Bchord28)
+            chordsmarkup.add(chord1, chord2, chord3, chord4, chord5, chord6, chord7, chord8, chord9, chord10, chord11,
+                             chord12,
+                             chord13, chord14, chord15, chord16, chord17, chord18, chord19, chord20, chord21, chord22,
+                             chord23,
+                             chord24, chord25, chord26, chord27, chord28)
 
-            bot.send_message(call.message.chat.id, 'Выберите аккорд:', reply_markup=Bchordsmarkup)
+            bot.send_message(call.message.chat.id, 'Выберите аккорд:', reply_markup=chordsmarkup)
 
     if call.message:
         if call.data == 'B_major':
@@ -1596,44 +1596,44 @@ def keys_chords_callback(call):
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
                                       text="Вы выбрали C (До)")
 
-            Cchordsmarkup = types.InlineKeyboardMarkup(row_width=3)
+            chordsmarkup = types.InlineKeyboardMarkup(row_width=3)
 
-            Cchord1 = types.InlineKeyboardButton("C", callback_data="C_major")
-            Cchord2 = types.InlineKeyboardButton("Cm", callback_data="C_minor")
-            Cchord3 = types.InlineKeyboardButton("C5", callback_data="C5")
-            Cchord4 = types.InlineKeyboardButton("C6", callback_data="C6")
-            Cchord5 = types.InlineKeyboardButton("C6 add9", callback_data="C6_9")
-            Cchord6 = types.InlineKeyboardButton("C7", callback_data="C7")
-            Cchord7 = types.InlineKeyboardButton("C maj7", callback_data="C_maj7")
-            Cchord8 = types.InlineKeyboardButton("C maj9", callback_data="C_maj9")
-            Cchord9 = types.InlineKeyboardButton("C7-5", callback_data="C7-5")
-            Cchord10 = types.InlineKeyboardButton("C7+5", callback_data="C7+5")
-            Cchord11 = types.InlineKeyboardButton("C9", callback_data="C9")
-            Cchord12 = types.InlineKeyboardButton("C11", callback_data="C11")
-            Cchord13 = types.InlineKeyboardButton("C13", callback_data="C13")
-            Cchord14 = types.InlineKeyboardButton("C aug", callback_data="C_aug")
-            Cchord15 = types.InlineKeyboardButton("C aug7", callback_data="C_aug7")
-            Cchord16 = types.InlineKeyboardButton("C dim", callback_data="C_dim")
-            Cchord17 = types.InlineKeyboardButton("C dim7", callback_data="C_dim7")
-            Cchord18 = types.InlineKeyboardButton("Cm6", callback_data="Cm6")
-            Cchord19 = types.InlineKeyboardButton("Cm7", callback_data="Cm7")
-            Cchord20 = types.InlineKeyboardButton("Cm7(b5)", callback_data="Cm7b5")
-            Cchord21 = types.InlineKeyboardButton("Cm9", callback_data="Cm9")
-            Cchord22 = types.InlineKeyboardButton("Cm11", callback_data="Cm11")
-            Cchord23 = types.InlineKeyboardButton("Cm13", callback_data="Cm13")
-            Cchord24 = types.InlineKeyboardButton("Cm maj7", callback_data="Cm_maj7")
-            Cchord25 = types.InlineKeyboardButton("C add2", callback_data="C_add2")
-            Cchord26 = types.InlineKeyboardButton("C add9", callback_data="C_add9")
-            Cchord27 = types.InlineKeyboardButton("C sus2", callback_data="C_sus2")
-            Cchord28 = types.InlineKeyboardButton("C sus4", callback_data="C_sus4")
+            chord1 = types.InlineKeyboardButton("C", callback_data="C_major")
+            chord2 = types.InlineKeyboardButton("Cm", callback_data="C_minor")
+            chord3 = types.InlineKeyboardButton("C5", callback_data="C5")
+            chord4 = types.InlineKeyboardButton("C6", callback_data="C6")
+            chord5 = types.InlineKeyboardButton("C6 add9", callback_data="C6_9")
+            chord6 = types.InlineKeyboardButton("C7", callback_data="C7")
+            chord7 = types.InlineKeyboardButton("C maj7", callback_data="C_maj7")
+            chord8 = types.InlineKeyboardButton("C maj9", callback_data="C_maj9")
+            chord9 = types.InlineKeyboardButton("C7-5", callback_data="C7-5")
+            chord10 = types.InlineKeyboardButton("C7+5", callback_data="C7+5")
+            chord11 = types.InlineKeyboardButton("C9", callback_data="C9")
+            chord12 = types.InlineKeyboardButton("C11", callback_data="C11")
+            chord13 = types.InlineKeyboardButton("C13", callback_data="C13")
+            chord14 = types.InlineKeyboardButton("C aug", callback_data="C_aug")
+            chord15 = types.InlineKeyboardButton("C aug7", callback_data="C_aug7")
+            chord16 = types.InlineKeyboardButton("C dim", callback_data="C_dim")
+            chord17 = types.InlineKeyboardButton("C dim7", callback_data="C_dim7")
+            chord18 = types.InlineKeyboardButton("Cm6", callback_data="Cm6")
+            chord19 = types.InlineKeyboardButton("Cm7", callback_data="Cm7")
+            chord20 = types.InlineKeyboardButton("Cm7(b5)", callback_data="Cm7b5")
+            chord21 = types.InlineKeyboardButton("Cm9", callback_data="Cm9")
+            chord22 = types.InlineKeyboardButton("Cm11", callback_data="Cm11")
+            chord23 = types.InlineKeyboardButton("Cm13", callback_data="Cm13")
+            chord24 = types.InlineKeyboardButton("Cm maj7", callback_data="Cm_maj7")
+            chord25 = types.InlineKeyboardButton("C add2", callback_data="C_add2")
+            chord26 = types.InlineKeyboardButton("C add9", callback_data="C_add9")
+            chord27 = types.InlineKeyboardButton("C sus2", callback_data="C_sus2")
+            chord28 = types.InlineKeyboardButton("C sus4", callback_data="C_sus4")
 
-            Cchordsmarkup.add(Cchord1, Cchord2, Cchord3, Cchord4, Cchord5, Cchord6, Cchord7, Cchord8, Cchord9, Cchord10, Cchord11,
-                             Cchord12,
-                             Cchord13, Cchord14, Cchord15, Cchord16, Cchord17, Cchord18, Cchord19, Cchord20, Cchord21, Cchord22,
-                             Cchord23,
-                             Cchord24, Cchord25, Cchord26, Cchord27, Cchord28)
+            chordsmarkup.add(chord1, chord2, chord3, chord4, chord5, chord6, chord7, chord8, chord9, chord10, chord11,
+                             chord12,
+                             chord13, chord14, chord15, chord16, chord17, chord18, chord19, chord20, chord21, chord22,
+                             chord23,
+                             chord24, chord25, chord26, chord27, chord28)
 
-            bot.send_message(call.message.chat.id, 'Выберите аккорд:', reply_markup=Cchordsmarkup)
+            bot.send_message(call.message.chat.id, 'Выберите аккорд:', reply_markup=chordsmarkup)
 
     if call.message:
         if call.data == 'C_major':
@@ -1930,7 +1930,7 @@ def keys_chords_callback(call):
             C_sus2p = open('bot_files/p_chords/C/csus2.png', 'rb')
 
             bot.send_photo(call.message.chat.id, C_sus2p)
-            B_sus2p.close()
+            C_sus2p.close()
 
     if call.message:
         if call.data == 'C_sus4':
@@ -1951,44 +1951,44 @@ def keys_chords_callback(call):
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
                                       text="Вы выбрали C# (До диез)")
 
-            Ddchordsmarkup = types.InlineKeyboardMarkup(row_width=3)
+            chordsmarkup = types.InlineKeyboardMarkup(row_width=3)
 
-            Ddchord1 = types.InlineKeyboardButton("C#", callback_data="C#_major")
-            Ddchord2 = types.InlineKeyboardButton("C#m", callback_data="C#_minor")
-            Ddchord3 = types.InlineKeyboardButton("C#5", callback_data="C#5")
-            Ddchord4 = types.InlineKeyboardButton("C#6", callback_data="C#6")
-            Ddchord5 = types.InlineKeyboardButton("C#6 add9", callback_data="C#6_9")
-            Ddchord6 = types.InlineKeyboardButton("C#7", callback_data="C#7")
-            Ddchord7 = types.InlineKeyboardButton("C# maj7", callback_data="C#_maj7")
-            Ddchord8 = types.InlineKeyboardButton("C# maj9", callback_data="C#_maj9")
-            Ddchord9 = types.InlineKeyboardButton("C#7-5", callback_data="C#7-5")
-            Ddchord10 = types.InlineKeyboardButton("C#7+5", callback_data="C#7+5")
-            Ddchord11 = types.InlineKeyboardButton("C#9", callback_data="C#9")
-            Ddchord12 = types.InlineKeyboardButton("C#11", callback_data="C#11")
-            Ddchord13 = types.InlineKeyboardButton("C#13", callback_data="C#13")
-            Ddchord14 = types.InlineKeyboardButton("C# aug", callback_data="C#_aug")
-            Ddchord15 = types.InlineKeyboardButton("C# aug7", callback_data="C#_aug7")
-            Ddchord16 = types.InlineKeyboardButton("C# dim", callback_data="C#_dim")
-            Ddchord17 = types.InlineKeyboardButton("C# dim7", callback_data="C#_dim7")
-            Ddchord18 = types.InlineKeyboardButton("C#m6", callback_data="C#m6")
-            Ddchord19 = types.InlineKeyboardButton("C#m7", callback_data="C#m7")
-            Ddchord20 = types.InlineKeyboardButton("C#m7(b5)", callback_data="C#m7b5")
-            Ddchord21 = types.InlineKeyboardButton("C#m9", callback_data="C#m9")
-            Ddchord22 = types.InlineKeyboardButton("C#m11", callback_data="C#m11")
-            Ddchord23 = types.InlineKeyboardButton("C#m13", callback_data="C#m13")
-            Ddchord24 = types.InlineKeyboardButton("C#m maj7", callback_data="C#m_maj7")
-            Ddchord25 = types.InlineKeyboardButton("C# add2", callback_data="C#_add2")
-            Ddchord26 = types.InlineKeyboardButton("C# add9", callback_data="C#_add9")
-            Ddchord27 = types.InlineKeyboardButton("C# sus2", callback_data="C#_sus2")
-            Ddchord28 = types.InlineKeyboardButton("C# sus4", callback_data="C#_sus4")
+            chord1 = types.InlineKeyboardButton("C#", callback_data="C#_major")
+            chord2 = types.InlineKeyboardButton("C#m", callback_data="C#_minor")
+            chord3 = types.InlineKeyboardButton("C#5", callback_data="C#5")
+            chord4 = types.InlineKeyboardButton("C#6", callback_data="C#6")
+            chord5 = types.InlineKeyboardButton("C#6 add9", callback_data="C#6_9")
+            chord6 = types.InlineKeyboardButton("C#7", callback_data="C#7")
+            chord7 = types.InlineKeyboardButton("C# maj7", callback_data="C#_maj7")
+            chord8 = types.InlineKeyboardButton("C# maj9", callback_data="C#_maj9")
+            chord9 = types.InlineKeyboardButton("C#7-5", callback_data="C#7-5")
+            chord10 = types.InlineKeyboardButton("C#7+5", callback_data="C#7+5")
+            chord11 = types.InlineKeyboardButton("C#9", callback_data="C#9")
+            chord12 = types.InlineKeyboardButton("C#11", callback_data="C#11")
+            chord13 = types.InlineKeyboardButton("C#13", callback_data="C#13")
+            chord14 = types.InlineKeyboardButton("C# aug", callback_data="C#_aug")
+            chord15 = types.InlineKeyboardButton("C# aug7", callback_data="C#_aug7")
+            chord16 = types.InlineKeyboardButton("C# dim", callback_data="C#_dim")
+            chord17 = types.InlineKeyboardButton("C# dim7", callback_data="C#_dim7")
+            chord18 = types.InlineKeyboardButton("C#m6", callback_data="C#m6")
+            chord19 = types.InlineKeyboardButton("C#m7", callback_data="C#m7")
+            chord20 = types.InlineKeyboardButton("C#m7(b5)", callback_data="C#m7b5")
+            chord21 = types.InlineKeyboardButton("C#m9", callback_data="C#m9")
+            chord22 = types.InlineKeyboardButton("C#m11", callback_data="C#m11")
+            chord23 = types.InlineKeyboardButton("C#m13", callback_data="C#m13")
+            chord24 = types.InlineKeyboardButton("C#m maj7", callback_data="C#m_maj7")
+            chord25 = types.InlineKeyboardButton("C# add2", callback_data="C#_add2")
+            chord26 = types.InlineKeyboardButton("C# add9", callback_data="C#_add9")
+            chord27 = types.InlineKeyboardButton("C# sus2", callback_data="C#_sus2")
+            chord28 = types.InlineKeyboardButton("C# sus4", callback_data="C#_sus4")
 
-            Ddchordsmarkup.add(Ddchord1, Ddchord2, Ddchord3, Ddchord4, Ddchord5, Ddchord6, Ddchord7, Ddchord8, Ddchord9, Ddchord10, Ddchord11,
-                             Ddchord12,
-                             Ddchord13, Ddchord14, Ddchord15, Ddchord16, Ddchord17, Ddchord18, Ddchord19, Ddchord20, Ddchord21, Ddchord22,
-                             Ddchord23,
-                             Ddchord24, Ddchord25, Ddchord26, Ddchord27, Ddchord28)
+            chordsmarkup.add(chord1, chord2, chord3, chord4, chord5, chord6, chord7, chord8, chord9, chord10, chord11,
+                             chord12,
+                             chord13, chord14, chord15, chord16, chord17, chord18, chord19, chord20, chord21, chord22,
+                             chord23,
+                             chord24, chord25, chord26, chord27, chord28)
 
-            bot.send_message(call.message.chat.id, 'Выберите аккорд:', reply_markup=Ddchordsmarkup)
+            bot.send_message(call.message.chat.id, 'Выберите аккорд:', reply_markup=chordsmarkup)
 
     if call.message:
         if call.data == 'C#_major':
@@ -2307,99 +2307,99 @@ def keys_chords_callback(call):
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
                                       text="Вы выбрали D (Ре)")
 
-            Cchordsmarkup = types.InlineKeyboardMarkup(row_width=3)
+            chordsmarkup = types.InlineKeyboardMarkup(row_width=3)
 
-            Cchord1 = types.InlineKeyboardButton("D", callback_data="D_major")
-            Cchord2 = types.InlineKeyboardButton("Cm", callback_data="C_minor")
-            Cchord3 = types.InlineKeyboardButton("C5", callback_data="C5")
-            Cchord4 = types.InlineKeyboardButton("C6", callback_data="C6")
-            Cchord5 = types.InlineKeyboardButton("C6 add9", callback_data="C6_9")
-            Cchord6 = types.InlineKeyboardButton("C7", callback_data="C7")
-            Cchord7 = types.InlineKeyboardButton("C maj7", callback_data="C_maj7")
-            Cchord8 = types.InlineKeyboardButton("C maj9", callback_data="C_maj9")
-            Cchord9 = types.InlineKeyboardButton("C7-5", callback_data="C7-5")
-            Cchord10 = types.InlineKeyboardButton("C7+5", callback_data="C7+5")
-            Cchord11 = types.InlineKeyboardButton("C9", callback_data="C9")
-            Cchord12 = types.InlineKeyboardButton("C11", callback_data="C11")
-            Cchord13 = types.InlineKeyboardButton("C13", callback_data="C13")
-            Cchord14 = types.InlineKeyboardButton("C aug", callback_data="C_aug")
-            Cchord15 = types.InlineKeyboardButton("C aug7", callback_data="C_aug7")
-            Cchord16 = types.InlineKeyboardButton("C dim", callback_data="C_dim")
-            Cchord17 = types.InlineKeyboardButton("C dim7", callback_data="C_dim7")
-            Cchord18 = types.InlineKeyboardButton("Cm6", callback_data="Cm6")
-            Cchord19 = types.InlineKeyboardButton("Cm7", callback_data="Cm7")
-            Cchord20 = types.InlineKeyboardButton("Cm7(b5)", callback_data="Cm7b5")
-            Cchord21 = types.InlineKeyboardButton("Cm9", callback_data="Cm9")
-            Cchord22 = types.InlineKeyboardButton("Cm11", callback_data="Cm11")
-            Cchord23 = types.InlineKeyboardButton("Cm13", callback_data="Cm13")
-            Cchord24 = types.InlineKeyboardButton("Cm maj7", callback_data="Cm_maj7")
-            Cchord25 = types.InlineKeyboardButton("C add2", callback_data="C_add2")
-            Cchord26 = types.InlineKeyboardButton("C add9", callback_data="C_add9")
-            Cchord27 = types.InlineKeyboardButton("C sus2", callback_data="C_sus2")
-            Cchord28 = types.InlineKeyboardButton("C sus4", callback_data="C_sus4")
+            chord1 = types.InlineKeyboardButton("D", callback_data="D_major")
+            chord2 = types.InlineKeyboardButton("Dm", callback_data="D_minor")
+            chord3 = types.InlineKeyboardButton("D5", callback_data="D5")
+            chord4 = types.InlineKeyboardButton("D6", callback_data="D6")
+            chord5 = types.InlineKeyboardButton("D6 add9", callback_data="D6_9")
+            chord6 = types.InlineKeyboardButton("D7", callback_data="D7")
+            chord7 = types.InlineKeyboardButton("D maj7", callback_data="D_maj7")
+            chord8 = types.InlineKeyboardButton("D maj9", callback_data="D_maj9")
+            chord9 = types.InlineKeyboardButton("D7-5", callback_data="D7-5")
+            chord10 = types.InlineKeyboardButton("D7+5", callback_data="D7+5")
+            chord11 = types.InlineKeyboardButton("D9", callback_data="9")
+            chord12 = types.InlineKeyboardButton("D11", callback_data="D11")
+            chord13 = types.InlineKeyboardButton("D13", callback_data="13")
+            chord14 = types.InlineKeyboardButton("D aug", callback_data="D_aug")
+            chord15 = types.InlineKeyboardButton("D aug7", callback_data="D_aug7")
+            chord16 = types.InlineKeyboardButton("D dim", callback_data="D_dim")
+            chord17 = types.InlineKeyboardButton("D dim7", callback_data="D_dim7")
+            chord18 = types.InlineKeyboardButton("Dm6", callback_data="Dm6")
+            chord19 = types.InlineKeyboardButton("Dm7", callback_data="Dm7")
+            chord20 = types.InlineKeyboardButton("Dm7(b5)", callback_data="Dm7b5")
+            chord21 = types.InlineKeyboardButton("Dm9", callback_data="Dm9")
+            chord22 = types.InlineKeyboardButton("Dm11", callback_data="Dm11")
+            chord23 = types.InlineKeyboardButton("Dm13", callback_data="Dm13")
+            chord24 = types.InlineKeyboardButton("Dm maj7", callback_data="Dm_maj7")
+            chord25 = types.InlineKeyboardButton("D add2", callback_data="D_add2")
+            chord26 = types.InlineKeyboardButton("D add9", callback_data="D_add9")
+            chord27 = types.InlineKeyboardButton("D sus2", callback_data="D_sus2")
+            chord28 = types.InlineKeyboardButton("D sus4", callback_data="D_sus4")
 
-            Cchordsmarkup.add(Cchord1, Cchord2, Cchord3, Cchord4, Cchord5, Cchord6, Cchord7, Cchord8, Cchord9, Cchord10, Cchord11,
-                             Cchord12,
-                             Cchord13, Cchord14, Cchord15, Cchord16, Cchord17, Cchord18, Cchord19, Cchord20, Cchord21, Cchord22,
-                             Cchord23,
-                             Cchord24, Cchord25, Cchord26, Cchord27, Cchord28)
+            chordsmarkup.add(chord1, chord2, chord3, chord4, chord5, chord6, chord7, chord8, chord9, chord10, chord11,
+                             chord12,
+                             chord13, chord14, chord15, chord16, chord17, chord18, chord19, chord20, chord21, chord22,
+                             chord23,
+                             chord24, chord25, chord26, chord27, chord28)
 
-            bot.send_message(call.message.chat.id, 'Выберите аккорд:', reply_markup=Cchordsmarkup)
+            bot.send_message(call.message.chat.id, 'Выберите аккорд:', reply_markup=chordsmarkup)
 
     if call.message:
         if call.data == 'D_major':
-            bot.send_message(call.message.chat.id, 'Вы выбрали D major (До мажор)')
+            bot.send_message(call.message.chat.id, 'Вы выбрали D major (Ре мажор)')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали D major (До мажор)")
+                                      text="Вы выбрали D major (Ре мажор)")
 
-            C_majorp = open('bot_files/p_chords/D/d.png', 'rb')
+            D_majorp = open('bot_files/p_chords/D/d.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, C_majorp)
-            C_majorp.close()
+            bot.send_photo(call.message.chat.id, D_majorp)
+            D_majorp.close()
 
     if call.message:
-        if call.data == 'C_minor':
-            bot.send_message(call.message.chat.id, 'Вы выбрали C minor (До минор)')
+        if call.data == 'D_minor':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D minor (Ре минор)')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали C minor (До минор)")
+                                      text="Вы выбрали D minor (Ре минор)")
 
-            C_minor = open('bot_files/p_chords/C/cm.png', 'rb')
+            D_minor = open('bot_files/p_chords/D/dm.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, C_minor)
-            C_minor.close()
+            bot.send_photo(call.message.chat.id, D_minor)
+            D_minor.close()
 
     if call.message:
-        if call.data == 'C5':
-            bot.send_message(call.message.chat.id, 'Вы выбрали C5')
+        if call.data == 'D5':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D5')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали C5")
+                                      text="Вы выбрали D5")
 
-            C5p = open('bot_files/p_chords/C/c5.png', 'rb')
+            D5p = open('bot_files/p_chords/D/d5.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, C5p)
-            C5p.close()
+            bot.send_photo(call.message.chat.id, D5p)
+            D5p.close()
 
     if call.message:
-        if call.data == 'C6':
-            bot.send_message(call.message.chat.id, 'Вы выбрали C6')
+        if call.data == 'D6':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D6')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали C6")
+                                      text="Вы выбрали D6")
 
-            C6p = open('bot_files/p_chords/C/c6.png', 'rb')
+            D6p = open('bot_files/p_chords/D/d6.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, C6p)
-            C6p.close()
+            bot.send_photo(call.message.chat.id, D6p)
+            D6p.close()
 
     if call.message:
-        if call.data == 'C6_9':
-            bot.send_message(call.message.chat.id, 'Вы выбрали C6 add9 ')
+        if call.data == 'D6_9':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D6 add9 ')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали C6 add9")
+                                      text="Вы выбрали D6 add9")
 
-            C6add9p = open('bot_files/p_chords/C/c6_9.png', 'rb')
+            D6add9p = open('bot_files/p_chords/D/d6_9.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, C6add9p)
-            C6add9p.close()
+            bot.send_photo(call.message.chat.id, D6add9p)
+            D6add9p.close()
 
     if call.message:
         if call.data == 'C7':
@@ -2407,252 +2407,252 @@ def keys_chords_callback(call):
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
                                       text="Вы выбрали C7")
 
-            C7p = open('bot_files/p_chords/C/c7.png', 'rb')
+            D7p = open('bot_files/p_chords/D/d7.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, C7p)
-            C7p.close()
-
-    if call.message:
-        if call.data == 'C_maj7':
-            bot.send_message(call.message.chat.id, 'Вы выбрали C maj7')
-            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали C maj7")
-
-            C_maj7p = open('bot_files/p_chords/C/cmaj7.png', 'rb')
-
-            bot.send_photo(call.message.chat.id, C_maj7p)
-            C_maj7p.close()
+            bot.send_photo(call.message.chat.id, D7p)
+            D7p.close()
 
     if call.message:
-        if call.data == 'C_maj9':
-            bot.send_message(call.message.chat.id, 'Вы выбрали C maj9')
+        if call.data == 'D_maj7':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D maj7')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали C maj9")
+                                      text="Вы выбрали D maj7")
 
-            C_maj9p = open('bot_files/p_chords/C/cmaj9.png', 'rb')
+            D_maj7p = open('bot_files/p_chords/D/dmaj7.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, C_maj9p)
-            C_maj9p.close()
+            bot.send_photo(call.message.chat.id, D_maj7p)
+            D_maj7p.close()
 
     if call.message:
-        if call.data == 'C7-5':
-            bot.send_message(call.message.chat.id, 'Вы выбрали C7-5')
+        if call.data == 'D_maj9':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D maj9')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали C7-5")
+                                      text="Вы выбрали D maj9")
 
-            C7min5p = open('bot_files/p_chords/C/c7minus5.png', 'rb')
+            D_maj9p = open('bot_files/p_chords/D/dmaj9.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, C7min5p)
-            C7min5p.close()
+            bot.send_photo(call.message.chat.id, D_maj9p)
+            D_maj9p.close()
 
     if call.message:
-        if call.data == 'C7+5':
-            bot.send_message(call.message.chat.id, 'Вы выбрали C7+5')
+        if call.data == 'D7-5':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D7-5')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали C7+5")
+                                      text="Вы выбрали D7-5")
 
-            C7plus5p = open('bot_files/p_chords/C/c7plus5.png', 'rb')
+            D7min5p = open('bot_files/p_chords/D/d7minus5.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, C7plus5p)
-            C7plus5p.close()
+            bot.send_photo(call.message.chat.id, D7min5p)
+            D7min5p.close()
 
     if call.message:
-        if call.data == 'C9':
-            bot.send_message(call.message.chat.id, 'Вы выбрали C9')
+        if call.data == 'D7+5':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D7+5')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали C9")
+                                      text="Вы выбрали D7+5")
 
-            C9p = open('bot_files/p_chords/C/c9.png', 'rb')
+            D7plus5p = open('bot_files/p_chords/D/d7plus5.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, C9p)
-            C9p.close()
+            bot.send_photo(call.message.chat.id, D7plus5p)
+            D7plus5p.close()
 
     if call.message:
-        if call.data == 'C11':
-            bot.send_message(call.message.chat.id, 'Вы выбрали C11')
+        if call.data == 'D9':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D9')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали C11")
+                                      text="Вы выбрали D9")
 
-            C11p = open('bot_files/p_chords/C/c11.png', 'rb')
+            D9p = open('bot_files/p_chords/D/d9.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, C11p)
-            C11p.close()
+            bot.send_photo(call.message.chat.id, D9p)
+            D9p.close()
 
     if call.message:
-        if call.data == 'C13':
-            bot.send_message(call.message.chat.id, 'Вы выбрали C13')
+        if call.data == 'D11':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D11')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали C13")
+                                      text="Вы выбрали D11")
 
-            C13p = open('bot_files/p_chords/C/c13.png', 'rb')
+            D11p = open('bot_files/p_chords/D/d11.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, C13p)
-            C13p.close()
+            bot.send_photo(call.message.chat.id, D11p)
+            D11p.close()
 
     if call.message:
-        if call.data == 'C_aug':
-            bot.send_message(call.message.chat.id, 'Вы выбрали C aug')
+        if call.data == 'D13':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D13')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали C aug")
+                                      text="Вы выбрали D13")
 
-            C_augp = open('bot_files/p_chords/C/caug.png', 'rb')
+            D13p = open('bot_files/p_chords/D/d13.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, C_augp)
-            C_augp.close()
+            bot.send_photo(call.message.chat.id, D13p)
+            D13p.close()
 
     if call.message:
-        if call.data == 'C_aug7':
-            bot.send_message(call.message.chat.id, 'Вы выбрали C_aug7')
+        if call.data == 'D_aug':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D aug')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали C_aug7")
+                                      text="Вы выбрали D aug")
 
-            C_aug7p = open('bot_files/p_chords/C/caug7.png', 'rb')
+            D_augp = open('bot_files/p_chords/D/daug.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, C_aug7p)
-            C_aug7p.close()
+            bot.send_photo(call.message.chat.id, D_augp)
+            D_augp.close()
 
     if call.message:
-        if call.data == 'C_dim':
-            bot.send_message(call.message.chat.id, 'Вы выбрали C dim')
+        if call.data == 'D_aug7':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D_aug7')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали C dim")
+                                      text="Вы выбрали D_aug7")
 
-            C_dimp = open('bot_files/p_chords/C/cdim.png', 'rb')
+            D_aug7p = open('bot_files/p_chords/D/daug7.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, C_dimp)
-            C_dimp.close()
+            bot.send_photo(call.message.chat.id, D_aug7p)
+            D_aug7p.close()
 
     if call.message:
-        if call.data == 'C_dim7':
-            bot.send_message(call.message.chat.id, 'Вы выбрали C dim7')
+        if call.data == 'D_dim':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D dim')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали C dim7")
+                                      text="Вы выбрали D dim")
 
-            C_dim7p = open('bot_files/p_chords/C/cdim7.png', 'rb')
+            D_dimp = open('bot_files/p_chords/D/ddim.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, C_dim7p)
-            C_dim7p.close()
+            bot.send_photo(call.message.chat.id, D_dimp)
+            D_dimp.close()
 
     if call.message:
-        if call.data == 'Cm6':
-            bot.send_message(call.message.chat.id, 'Вы выбрали Cm6')
+        if call.data == 'D_dim7':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D dim7')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали Cm6")
+                                      text="Вы выбрали D dim7")
 
-            Cm6p = open('bot_files/p_chords/C/cm6.png', 'rb')
+            D_dim7p = open('bot_files/p_chords/D/ddim7.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, Cm6p)
-            Cm6p.close()
+            bot.send_photo(call.message.chat.id, D_dim7p)
+            D_dim7p.close()
 
     if call.message:
-        if call.data == 'Cm7':
-            bot.send_message(call.message.chat.id, 'Вы выбрали Cm7')
+        if call.data == 'Dm6':
+            bot.send_message(call.message.chat.id, 'Вы выбрали Dm6')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали Cm7")
+                                      text="Вы выбрали Dm6")
 
-            Cm7p = open('bot_files/p_chords/C/cm7.png', 'rb')
+            Dm6p = open('bot_files/p_chords/D/dm6.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, Cm7p)
-            Cm7p.close()
+            bot.send_photo(call.message.chat.id, Dm6p)
+            Dm6p.close()
 
     if call.message:
-        if call.data == 'Cm7b5':
-            bot.send_message(call.message.chat.id, 'Вы выбрали Cm7(b5)')
+        if call.data == 'Dm7':
+            bot.send_message(call.message.chat.id, 'Вы выбрали Dm7')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали Cm7(b5)")
+                                      text="Вы выбрали Dm7")
 
-            Cm7b5p = open('bot_files/p_chords/C/cm7b5.png', 'rb')
+            Dm7p = open('bot_files/p_chords/D/dm7.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, Cm7b5p)
-            Cm7b5p.close()
+            bot.send_photo(call.message.chat.id, Dm7p)
+            Dm7p.close()
 
     if call.message:
-        if call.data == 'Cm9':
-            bot.send_message(call.message.chat.id, 'Вы выбрали Cm9')
+        if call.data == 'Dm7b5':
+            bot.send_message(call.message.chat.id, 'Вы выбрали Dm7(b5)')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали Cm9")
+                                      text="Вы выбрали Dm7(b5)")
 
-            Cm9p = open('bot_files/p_chords/C/cm9.png', 'rb')
+            Dm7b5p = open('bot_files/p_chords/D/dm7b5.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, Cm9p)
-            Cm9p.close()
+            bot.send_photo(call.message.chat.id, Dm7b5p)
+            Dm7b5p.close()
 
     if call.message:
-        if call.data == 'Cm11':
-            bot.send_message(call.message.chat.id, 'Вы выбрали Cm11')
+        if call.data == 'Dm9':
+            bot.send_message(call.message.chat.id, 'Вы выбрали Dm9')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали Cm11")
+                                      text="Вы выбрали Dm9")
 
-            Cm11p = open('bot_files/p_chords/C/cm11.png', 'rb')
+            Dm9p = open('bot_files/p_chords/D/dm9.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, Cm11p)
-            Cm11p.close()
+            bot.send_photo(call.message.chat.id, Dm9p)
+            Dm9p.close()
 
     if call.message:
-        if call.data == 'Cm13':
-            bot.send_message(call.message.chat.id, 'Вы выбрали Cm13')
+        if call.data == 'Dm11':
+            bot.send_message(call.message.chat.id, 'Вы выбрали Dm11')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали Cm13")
+                                      text="Вы выбрали Dm11")
 
-            Cm13p = open('bot_files/p_chords/C/cm13.png', 'rb')
+            Dm11p = open('bot_files/p_chords/D/dm11.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, Cm13p)
-            Cm13p.close()
+            bot.send_photo(call.message.chat.id, Dm11p)
+            Dm11p.close()
 
     if call.message:
-        if call.data == 'Cm_maj7':
-            bot.send_message(call.message.chat.id, 'Вы выбрали Cm maj7')
+        if call.data == 'Dm13':
+            bot.send_message(call.message.chat.id, 'Вы выбрали Dm13')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали Cm maj7")
+                                      text="Вы выбрали Dm13")
 
-            Cm_maj7p = open('bot_files/p_chords/C/cminmaj7.png', 'rb')
+            Dm13p = open('bot_files/p_chords/D/dm13.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, Cm_maj7p)
-            Cm_maj7p.close()
+            bot.send_photo(call.message.chat.id, Dm13p)
+            Dm13p.close()
 
     if call.message:
-        if call.data == 'C_add2':
-            bot.send_message(call.message.chat.id, 'Вы выбрали C add2')
+        if call.data == 'Dm_maj7':
+            bot.send_message(call.message.chat.id, 'Вы выбрали Dm maj7')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали C add2")
+                                      text="Вы выбрали Dm maj7")
 
-            C_add2p = open('bot_files/p_chords/C/cadd2.png', 'rb')
+            Dm_maj7p = open('bot_files/p_chords/D/dminmaj7.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, C_add2p)
-            C_add2p.close()
+            bot.send_photo(call.message.chat.id, Dm_maj7p)
+            Dm_maj7p.close()
 
     if call.message:
-        if call.data == 'C_add4':
-            bot.send_message(call.message.chat.id, 'Вы выбрали C add4')
+        if call.data == 'D_add2':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D add2')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали C add4")
+                                      text="Вы выбрали D add2")
 
-            C_add4p = open('bot_files/p_chords/C/cadd4.png', 'rb')
+            D_add2p = open('bot_files/p_chords/D/dadd2.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, C_add4p)
-            C_add4p.close()
+            bot.send_photo(call.message.chat.id, D_add2p)
+            D_add2p.close()
 
     if call.message:
-        if call.data == 'C_sus2':
-            bot.send_message(call.message.chat.id, 'Вы выбрали C sus2')
+        if call.data == 'D_add4':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D add4')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали C sus2")
+                                      text="Вы выбрали D add4")
 
-            C_sus2p = open('bot_files/p_chords/C/csus2.png', 'rb')
+            D_add4p = open('bot_files/p_chords/D/dadd4.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, C_sus2p)
-            B_sus2p.close()
+            bot.send_photo(call.message.chat.id, D_add4p)
+            D_add4p.close()
 
     if call.message:
-        if call.data == 'C_sus4':
-            bot.send_message(call.message.chat.id, 'Вы выбрали C sus4')
+        if call.data == 'D_sus2':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D sus2')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали C sus4")
+                                      text="Вы выбрали D sus2")
 
-            C_sus4p = open('bot_files/p_chords/C/csus4.png', 'rb')
+            D_sus2p = open('bot_files/p_chords/D/dsus2.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, C_sus4p)
-            C_sus4p.close()
+            bot.send_photo(call.message.chat.id, D_sus2p)
+            D_sus2p.close()
+
+    if call.message:
+        if call.data == 'D_sus4':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D sus4')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали D sus4")
+
+            D_sus4p = open('bot_files/p_chords/D/dsus4.png', 'rb')
+
+            bot.send_photo(call.message.chat.id, D_sus4p)
+            D_sus4p.close()
 
 
 
