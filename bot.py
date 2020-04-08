@@ -1556,15 +1556,15 @@ def keys_chords_callback(call):
             B_add2p.close()
 
     if call.message:
-        if call.data == 'B_add4':
-            bot.send_message(call.message.chat.id, 'Вы выбрали B add4')
+        if call.data == 'B_add9':
+            bot.send_message(call.message.chat.id, 'Вы выбрали B add9')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
                                       text="Вы выбрали B add4")
 
-            B_add4p = open('bot_files/p_chords/B/badd4.png', 'rb')
+            B_add9p = open('bot_files/p_chords/B/badd9.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, B_add4p)
-            B_add4p.close()
+            bot.send_photo(call.message.chat.id, B_add9p)
+            B_add9p.close()
 
     if call.message:
         if call.data == 'B_sus2':
@@ -1911,15 +1911,15 @@ def keys_chords_callback(call):
             C_add2p.close()
 
     if call.message:
-        if call.data == 'C_add4':
-            bot.send_message(call.message.chat.id, 'Вы выбрали C add4')
+        if call.data == 'C_add9':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C add9')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали C add4")
+                                      text="Вы выбрали C add9")
 
-            C_add4p = open('bot_files/p_chords/C/cadd4.png', 'rb')
+            C_add9p = open('bot_files/p_chords/C/cadd9.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, C_add4p)
-            C_add4p.close()
+            bot.send_photo(call.message.chat.id, C_add9p)
+            C_add9p.close()
 
     if call.message:
         if call.data == 'C_sus2':
@@ -2266,15 +2266,15 @@ def keys_chords_callback(call):
             Dd_add2p.close()
 
     if call.message:
-        if call.data == 'C#_add4':
-            bot.send_message(call.message.chat.id, 'Вы выбрали C# add4')
+        if call.data == 'C#_add9':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C# add9')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали C# add4")
+                                      text="Вы выбрали C# add9")
 
-            Dd_add4p = open('bot_files/p_chords/C#/d_flat_add9.png', 'rb')
+            Dd_add9p = open('bot_files/p_chords/C#/d_flat_add9.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, Dd_add4p)
-            Dd_add4p.close()
+            bot.send_photo(call.message.chat.id, Dd_add9p)
+            Dd_add9p.close()
 
     if call.message:
         if call.data == 'C#_sus2':
@@ -2622,15 +2622,15 @@ def keys_chords_callback(call):
             D_add2p.close()
 
     if call.message:
-        if call.data == 'D_add4':
-            bot.send_message(call.message.chat.id, 'Вы выбрали D add4')
+        if call.data == 'D_add9':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D add9')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали D add4")
+                                      text="Вы выбрали D add9")
 
-            D_add4p = open('bot_files/p_chords/D/dadd4.png', 'rb')
+            D_add9p = open('bot_files/p_chords/D/dadd9.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, D_add4p)
-            D_add4p.close()
+            bot.send_photo(call.message.chat.id, D_add9p)
+            D_add9p.close()
 
     if call.message:
         if call.data == 'D_sus2':
@@ -2977,15 +2977,15 @@ def keys_chords_callback(call):
             Ed_add2p.close()
 
     if call.message:
-        if call.data == 'D#_add4':
-            bot.send_message(call.message.chat.id, 'Вы выбрали D# add4')
+        if call.data == 'D#_add9':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D# add9')
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
-                                      text="Вы выбрали D# add4")
+                                      text="Вы выбрали D# add9")
 
-            Ed_add4p = open('bot_files/p_chords/D#/e_flat_add9.png', 'rb')
+            Ed_add9p = open('bot_files/p_chords/D#/e_flat_add9.png', 'rb')
 
-            bot.send_photo(call.message.chat.id, Ed_add4p)
-            Ed_add4p.close()
+            bot.send_photo(call.message.chat.id, Ed_add9p)
+            Ed_add9p.close()
 
     if call.message:
         if call.data == 'D#_sus2':
