@@ -86,17 +86,17 @@ def p_chords(message):
     chordsnotemarkup = types.InlineKeyboardMarkup(row_width=3)
 
     note1 = types.InlineKeyboardButton("A ", callback_data="Ap")
-    note2 = types.InlineKeyboardButton("A# ", callback_data="A#p")
+    note2 = types.InlineKeyboardButton("A#/Bb ", callback_data="A#p")
     note3 = types.InlineKeyboardButton("B ", callback_data="Bp")
     note4 = types.InlineKeyboardButton("C ", callback_data="Cp")
-    note5 = types.InlineKeyboardButton("C# ", callback_data="C#p")
+    note5 = types.InlineKeyboardButton("C#/Db ", callback_data="C#p")
     note6 = types.InlineKeyboardButton("D ", callback_data="Dp")
-    note7 = types.InlineKeyboardButton("D# ", callback_data="D#p")
+    note7 = types.InlineKeyboardButton("D#/Eb ", callback_data="D#p")
     note8 = types.InlineKeyboardButton("E ", callback_data="Ep")
     note9 = types.InlineKeyboardButton("F ", callback_data="Fp")
-    note10 = types.InlineKeyboardButton("F# ", callback_data="F#p")
+    note10 = types.InlineKeyboardButton("F#/Gb ", callback_data="F#p")
     note11 = types.InlineKeyboardButton("G ", callback_data="Gp")
-    note12 = types.InlineKeyboardButton("G# ", callback_data="G#p")
+    note12 = types.InlineKeyboardButton("G#/Ab ", callback_data="G#p")
 
     chordsnotemarkup.add(note1, note2, note3, note4, note5, note6, note7, note8, note9, note10, note11, note12)
 
