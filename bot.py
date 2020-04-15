@@ -11,13 +11,15 @@ def start_message(message):
     item1 = types.KeyboardButton("/help")
     item2 = types.KeyboardButton("/circle")
     item3 = types.KeyboardButton('/key')
-    item4 = types.KeyboardButton('/p_chords')
-    item5 = types.KeyboardButton('/g_chords')
-    item6 = types.KeyboardButton('/p_intervals')
-    item7 = types.KeyboardButton('/g_intervals')
-    item8 = types.KeyboardButton('/start')
+    item4 = types.KeyboardButton('/pent')
+    item5 = types.KeyboardButton('/p_chords')
+    item6 = types.KeyboardButton('/g_chords')
+    item7 = types.KeyboardButton('/p_intervals')
+    item8 = types.KeyboardButton('/g_intervals')
+    item9 = types.KeyboardButton('/start')
 
-    markup.add(item1, item2, item3, item4, item5, item6, item7, item8)
+
+    markup.add(item1, item2, item3, item4, item5, item6, item7, item8, item9)
 
     bot.send_message(message.chat.id,
                      'Оу, привет, <b>{0.first_name}</b>! Добро пожаловать!\n\nИспользуйте /help для получения списка команд.'.format(
@@ -28,7 +30,7 @@ def start_message(message):
 @bot.message_handler(commands=['help'])
 def help_rus(message):
     bot.send_message(message.chat.id,
-                     'Список команд:\n/circle - Кварто-квинтовый круг\n/key - Выберите тональность, которая Вам нужна 🎼\n/p_chords - Аппликатура аккодра для ПИАНИНО 🎹\n/p_interval - Аппликатура интервалов для ПИАНИНО 🎹\n/g_interval - Аппликатура интервалов для ГИТАРЫ 🎸\n/g_chords - Аппликатура аккодра для ГИТАРЫ 🎸(В РАЗРАБОТКЕ)')
+                     'Список команд:\n/circle - Кварто-квинтовый круг\n/key - Выберите тональность, которая Вам нужна 🎼\n/pent - Выберите пентатонику, которая Вам нужна 🎼\n/p_chords - Аппликатура аккодра для ПИАНИНО 🎹\n/p_interval - Аппликатура интервалов для ПИАНИНО 🎹\n/g_interval - Аппликатура интервалов для ГИТАРЫ 🎸\n/g_chords - Аппликатура аккодра для ГИТАРЫ 🎸(В РАЗРАБОТКЕ)')
 
 
 @bot.message_handler(commands=['circle'])
@@ -59,7 +61,7 @@ def g_intervals_rus(message):
 
 
 @bot.message_handler(commands=['key'])
-def help_rus(message):
+def key_rus(message):
     keymarkup = types.InlineKeyboardMarkup(row_width=3)
     key1 = types.InlineKeyboardButton('A', callback_data='A')
     key2 = types.InlineKeyboardButton('A#/Bb', callback_data='A#')
@@ -80,11 +82,8 @@ def help_rus(message):
 
 
 @bot.message_handler(commands=['p_chords'])
-
-
 def p_chords(message):
     chordsnotemarkup = types.InlineKeyboardMarkup(row_width=3)
-
     note1 = types.InlineKeyboardButton("A ", callback_data="Ap")
     note2 = types.InlineKeyboardButton("A#/Bb ", callback_data="A#p")
     note3 = types.InlineKeyboardButton("B ", callback_data="Bp")
@@ -101,6 +100,26 @@ def p_chords(message):
     chordsnotemarkup.add(note1, note2, note3, note4, note5, note6, note7, note8, note9, note10, note11, note12)
 
     bot.send_message(message.chat.id, 'Выберите тонику аккорда:', reply_markup=chordsnotemarkup)
+
+@bot.message_handler(commands=['pent'])
+def pent_rus(message):
+    pentmarkup = types.InlineKeyboardMarkup(row_width=3)
+    pent1 = types.InlineKeyboardButton('A', callback_data='Apt')
+    pent2 = types.InlineKeyboardButton('A#/Bb', callback_data='A#pt')
+    pent3 = types.InlineKeyboardButton('B', callback_data='Bpt')
+    pent4 = types.InlineKeyboardButton('C', callback_data='Cpt')
+    pent5 = types.InlineKeyboardButton('C#/Db', callback_data='C#pt')
+    pent6 = types.InlineKeyboardButton('D', callback_data='Dpt')
+    pent7 = types.InlineKeyboardButton('D#/Eb', callback_data='D#pt')
+    pent8 = types.InlineKeyboardButton('E', callback_data='Ept')
+    pent9 = types.InlineKeyboardButton('F', callback_data='Fpt')
+    pent10 = types.InlineKeyboardButton('F#/Gb', callback_data='F#pt')
+    pent11 = types.InlineKeyboardButton('G', callback_data='Gpt')
+    pent12 = types.InlineKeyboardButton('G#/Ab', callback_data='G#pt')
+
+    pentmarkup.add(pent1, pent2, pent3, pent4, pent5, pent6, pent7, pent8, pent9, pent10, pent11, pent12)
+
+    bot.send_message(message.chat.id, 'Выберите тонику:', reply_markup=pentmarkup)
 
 
 @bot.callback_query_handler(func=lambda call: True)
@@ -4784,74 +4803,47 @@ def keys_chords_callback(call):
             bot.send_photo(call.message.chat.id, Ad_sus4p)
             Ad_sus4p.close()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#pentatonics
+    if call.message:
+        if call.data == 'Apt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А (Ля)')
+
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А (Ля)")
+
+            Apentmarkup = types.InlineKeyboardMarkup(row_width=2)
+            Apent1 = types.InlineKeyboardButton("Major", callback_data="MajorApt")
+            Apent2 = types.InlineKeyboardButton("Minor", callback_data="MinorApt")
+
+            Apentmarkup.add(Apent1, Apent2)
+
+            bot.send_message(call.message.chat.id, 'Выберите лад', reply_markup=Apentmarkup)
+
+    if call.message:
+        if call.data == 'MajorApt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А major (Ля мажор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали А major (Ля мажор)")
+
+            amajpt1 = open('bot_files/pentatonics/p_pent/a-major-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            amajpt2 = open('bot_files/pentatonics/g_pent/A-Major Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, amajpt1)
+            bot.send_photo(call.message.chat.id, amajpt2)
+            amajpt1.close()
+            amajpt2.close()
+
+    if call.message:
+        if call.data == 'MinorApt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А minor (Ля минор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали А minor (Ля минор)")
+
+            ampt1 = open('bot_files/pentatonics/p_pent/a-minor-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            ampt2 = open('bot_files/pentatonics/g_pent/A-Minor Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, ampt1)
+            bot.send_photo(call.message.chat.id, ampt2)
+            ampt1.close()
+            ampt2.close()
 
 
 @bot.message_handler(commands=['g_chords'])
