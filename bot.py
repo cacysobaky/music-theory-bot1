@@ -30,7 +30,7 @@ def start_message(message):
 @bot.message_handler(commands=['help'])
 def help_rus(message):
     bot.send_message(message.chat.id,
-                     'Список команд:\n/circle - Кварто-квинтовый круг\n/key - Выберите тональность, которая Вам нужна 🎼\n/pent - Выберите пентатонику, которая Вам нужна 🎼\n/p_chords - Аппликатура аккодра для ПИАНИНО 🎹\n/p_interval - Аппликатура интервалов для ПИАНИНО 🎹\n/g_interval - Аппликатура интервалов для ГИТАРЫ 🎸\n/g_chords - Аппликатура аккодра для ГИТАРЫ 🎸(В РАЗРАБОТКЕ)')
+                     'Список команд:\n/circle - Кварто-квинтовый круг\n/key - Выберите тональность, которая Вам нужна 🎼\n/pent - Выберите пентатонику, которая Вам нужна 🎼\n/p_chords - Аппликатура аккодров для ПИАНИНО 🎹\n/p_interval - Аппликатура интервалов для ПИАНИНО 🎹\n/g_interval - Аппликатура интервалов для ГИТАРЫ 🎸\n/g_chords - Аппликатура аккодров для ГИТАРЫ 🎸(В РАЗРАБОТКЕ)')
 
 
 @bot.message_handler(commands=['circle'])
@@ -4811,13 +4811,13 @@ def keys_chords_callback(call):
             bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
                                       text="Вы выбрали А (Ля)")
 
-            Apentmarkup = types.InlineKeyboardMarkup(row_width=2)
-            Apent1 = types.InlineKeyboardButton("Major", callback_data="MajorApt")
-            Apent2 = types.InlineKeyboardButton("Minor", callback_data="MinorApt")
+            Pentmarkup = types.InlineKeyboardMarkup(row_width=2)
+            Pent1 = types.InlineKeyboardButton("Major", callback_data="MajorApt")
+            Pent2 = types.InlineKeyboardButton("Minor", callback_data="MinorApt")
 
-            Apentmarkup.add(Apent1, Apent2)
+            Pentmarkup.add(Pent1, Pent2)
 
-            bot.send_message(call.message.chat.id, 'Выберите лад', reply_markup=Apentmarkup)
+            bot.send_message(call.message.chat.id, 'Выберите лад', reply_markup=Pentmarkup)
 
     if call.message:
         if call.data == 'MajorApt':
@@ -4845,7 +4845,461 @@ def keys_chords_callback(call):
             ampt1.close()
             ampt2.close()
 
+    if call.message:
+        if call.data == 'A#pt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А# (Ля диез)')
 
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали А# (Ля диез)")
+
+            Pentmarkup = types.InlineKeyboardMarkup(row_width=2)
+            Pent1 = types.InlineKeyboardButton("Major", callback_data="MajorA#pt")
+            Pent2 = types.InlineKeyboardButton("Minor", callback_data="MinorA#pt")
+
+            Pentmarkup.add(Pent1, Pent2)
+
+            bot.send_message(call.message.chat.id, 'Выберите лад', reply_markup=Pentmarkup)
+
+    if call.message:
+        if call.data == 'MajorA#pt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А# major (Ля диез мажор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали А# major (Ля диез мажор)")
+
+            Bbmajpt1 = open('bot_files/pentatonics/p_pent/a-sharp-major-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            Bbmajpt2 = open('bot_files/pentatonics/g_pent/Asharp-Major Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, Bbmajpt1)
+            bot.send_photo(call.message.chat.id, Bbmajpt2)
+            Bbmajpt1.close()
+            Bbmajpt2.close()
+
+    if call.message:
+        if call.data == 'MinorA#pt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали А# minor (Ля диез минор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали А# minor (Ля диез минор)")
+
+            Bbmpt1 = open('bot_files/pentatonics/p_pent/a-sharp-minor-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            Bbmpt2 = open('bot_files/pentatonics/g_pent/', 'rb')
+            bot.send_photo(call.message.chat.id, Bbmpt1)
+            bot.send_photo(call.message.chat.id, Bbmpt2)
+            Bbmpt1.close()
+            Bbmpt2.close()
+
+    if call.message:
+        if call.data == 'Bpt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали B (Си)')
+
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали B (Си)")
+
+            Pentmarkup = types.InlineKeyboardMarkup(row_width=2)
+            Pent1 = types.InlineKeyboardButton("Major", callback_data="MajorBpt")
+            Pent2 = types.InlineKeyboardButton("Minor", callback_data="MinorBpt")
+
+            Pentmarkup.add(Pent1, Pent2)
+
+            bot.send_message(call.message.chat.id, 'Выберите лад', reply_markup=Pentmarkup)
+
+    if call.message:
+        if call.data == 'MajorBpt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали B major (Си мажор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали B major (Си мажор)")
+
+            Bmajpt1 = open('bot_files/pentatonics/p_pent/b-major-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            Bmajpt2 = open('bot_files/pentatonics/g_pent/B-Major Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, Bmajpt1)
+            bot.send_photo(call.message.chat.id, Bmajpt2)
+            Bmajpt1.close()
+            Bmajpt2.close()
+
+    if call.message:
+        if call.data == 'MinorBpt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали B minor (Си минор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали B minor (Си минор)")
+
+            Bmpt1 = open('bot_files/pentatonics/p_pent/b-minor-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            Bmpt2 = open('bot_files/pentatonics/g_pent/B-Minor Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, Bmpt1)
+            bot.send_photo(call.message.chat.id, Bmpt2)
+            Bmpt1.close()
+            Bmpt2.close()
+
+    if call.message:
+        if call.data == 'Cpt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C (До)')
+
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C (До)")
+
+            Pentmarkup = types.InlineKeyboardMarkup(row_width=2)
+            Pent1 = types.InlineKeyboardButton("Major", callback_data="MajorCpt")
+            Pent2 = types.InlineKeyboardButton("Minor", callback_data="MinorCpt")
+
+            Pentmarkup.add(Pent1, Pent2)
+
+            bot.send_message(call.message.chat.id, 'Выберите лад', reply_markup=Pentmarkup)
+
+    if call.message:
+        if call.data == 'MajorCpt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C major (До мажор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали C major (До мажор)")
+
+            Cmajpt1 = open('bot_files/pentatonics/p_pent/c-major-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            Cmajpt2 = open('bot_files/pentatonics/g_pent/C-Major Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, Cmajpt1)
+            bot.send_photo(call.message.chat.id, Cmajpt2)
+            Cmajpt1.close()
+            Cmajpt2.close()
+
+    if call.message:
+        if call.data == 'MinorCpt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C minor (До минор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали C minor (До минор)")
+
+            Cmpt1 = open('bot_files/pentatonics/p_pent/c-minor-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            Cmpt2 = open('bot_files/pentatonics/g_pent/C-Minor Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, Cmpt1)
+            bot.send_photo(call.message.chat.id, Cmpt2)
+            Cmpt1.close()
+            Cmpt2.close()
+
+    if call.message:
+        if call.data == 'C#pt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C# (До диез)')
+
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали C# (До диез)")
+
+            Pentmarkup = types.InlineKeyboardMarkup(row_width=2)
+            Pent1 = types.InlineKeyboardButton("Major", callback_data="MajorC#pt")
+            Pent2 = types.InlineKeyboardButton("Minor", callback_data="MinorC#pt")
+
+            Pentmarkup.add(Pent1, Pent2)
+
+            bot.send_message(call.message.chat.id, 'Выберите лад', reply_markup=Pentmarkup)
+
+    if call.message:
+        if call.data == 'MajorC#pt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C# major (До диез мажор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали C# major (До диез мажор)")
+
+            Dbmajpt1 = open('bot_files/pentatonics/p_pent/c-sharp-major-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            Dbmajpt2 = open('bot_files/pentatonics/g_pent/Csharp-Major Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, Dbmajpt1)
+            bot.send_photo(call.message.chat.id, Dbmajpt2)
+            Dbmajpt1.close()
+            Dbmajpt2.close()
+
+    if call.message:
+        if call.data == 'MinorC#pt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали C# minor (До диез минор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали C# minor (До диез минор)")
+
+            Dbmpt1 = open('bot_files/pentatonics/p_pent/c-sharp-minor-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            Dbmpt2 = open('bot_files/pentatonics/g_pent/Csharp-Minor Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, Dbmpt1)
+            bot.send_photo(call.message.chat.id, Dbmpt2)
+            Dbmpt1.close()
+            Dbmpt2.close()
+
+    if call.message:
+        if call.data == 'Dpt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D (Ре)')
+
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали D (Ре)")
+
+            Pentmarkup = types.InlineKeyboardMarkup(row_width=2)
+            Pent1 = types.InlineKeyboardButton("Major", callback_data="MajorDpt")
+            Pent2 = types.InlineKeyboardButton("Minor", callback_data="MinorDpt")
+
+            Pentmarkup.add(Pent1, Pent2)
+
+            bot.send_message(call.message.chat.id, 'Выберите лад', reply_markup=Pentmarkup)
+
+    if call.message:
+        if call.data == 'MajorDpt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D major (Ре мажор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали D major (Ре мажор)")
+
+            Dmajpt1 = open('bot_files/pentatonics/p_pent/d-major-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            Dmajpt2 = open('bot_files/pentatonics/g_pent/D-Major Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, Dmajpt1)
+            bot.send_photo(call.message.chat.id, Dmajpt2)
+            Dmajpt1.close()
+            Dmajpt2.close()
+
+    if call.message:
+        if call.data == 'MinorDpt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D minor (Ре минор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали D minor (Ре минор)")
+
+            Dmpt1 = open('bot_files/pentatonics/p_pent/d-minor-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            Dmpt2 = open('bot_files/pentatonics/g_pent/D-Minor Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, Dmpt1)
+            bot.send_photo(call.message.chat.id, Dmpt2)
+            Dmpt1.close()
+            Dmpt2.close()
+
+    if call.message:
+        if call.data == 'D#pt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D# (Ре диез)')
+
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали D# (Ре диез)")
+
+            Pentmarkup = types.InlineKeyboardMarkup(row_width=2)
+            Pent1 = types.InlineKeyboardButton("Major", callback_data="MajorD#pt")
+            Pent2 = types.InlineKeyboardButton("Minor", callback_data="MinorD#pt")
+
+            Pentmarkup.add(Pent1, Pent2)
+
+            bot.send_message(call.message.chat.id, 'Выберите лад', reply_markup=Pentmarkup)
+
+    if call.message:
+        if call.data == 'MajorD#pt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D# major (Ре диез мажор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали D# major (Ре диез мажор)")
+
+            Ebmajpt1 = open('bot_files/pentatonics/p_pent/d-sharp-major-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            Ebmajpt2 = open('bot_files/pentatonics/g_pent/Dsharp-Major Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, Ebmajpt1)
+            bot.send_photo(call.message.chat.id, Ebmajpt2)
+            Ebmajpt1.close()
+            Ebmajpt2.close()
+
+    if call.message:
+        if call.data == 'MinorD#pt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали D# minor (Ре диез минор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали D# minor (Ре диез минор)")
+
+            Ebmpt1 = open('bot_files/pentatonics/p_pent/d-sharp-minor-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            Ebmpt2 = open('bot_files/pentatonics/g_pent/Dsharp-Minor Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, Ebmpt1)
+            bot.send_photo(call.message.chat.id, Ebmpt2)
+            Ebmpt1.close()
+            Ebmpt2.close()
+
+    if call.message:
+        if call.data == 'Ept':
+            bot.send_message(call.message.chat.id, 'Вы выбрали E (Ми)')
+
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали E (Ми)")
+
+            Pentmarkup = types.InlineKeyboardMarkup(row_width=2)
+            Pent1 = types.InlineKeyboardButton("Major", callback_data="MajorEpt")
+            Pent2 = types.InlineKeyboardButton("Minor", callback_data="MinorEpt")
+
+            Pentmarkup.add(Pent1, Pent2)
+
+            bot.send_message(call.message.chat.id, 'Выберите лад', reply_markup=Pentmarkup)
+
+    if call.message:
+        if call.data == 'MajorEpt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали E major (Ми мажор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали E major (Ми мажор)")
+
+            Emajpt1 = open('bot_files/pentatonics/p_pent/e-major-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            Emajpt2 = open('bot_files/pentatonics/g_pent/E-Major Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, Emajpt1)
+            bot.send_photo(call.message.chat.id, Emajpt2)
+            Emajpt1.close()
+            Emajpt2.close()
+
+    if call.message:
+        if call.data == 'MinorEpt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали E minor (Ми минор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали E minor (Ми минор)")
+
+            Empt1 = open('bot_files/pentatonics/p_pent/e-minor-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            Empt2 = open('bot_files/pentatonics/g_pent/E-Minor Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, Empt1)
+            bot.send_photo(call.message.chat.id, Empt2)
+            Empt1.close()
+            Empt2.close()
+
+    if call.message:
+        if call.data == 'Fpt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали F (Фа)')
+
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали F (Фа)")
+
+            Pentmarkup = types.InlineKeyboardMarkup(row_width=2)
+            Pent1 = types.InlineKeyboardButton("Major", callback_data="MajorFpt")
+            Pent2 = types.InlineKeyboardButton("Minor", callback_data="MinorFpt")
+
+            Pentmarkup.add(Pent1, Pent2)
+
+            bot.send_message(call.message.chat.id, 'Выберите лад', reply_markup=Pentmarkup)
+
+    if call.message:
+        if call.data == 'MajorFpt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали F major (Фа мажор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали F major (Фа мажор)")
+
+            Fmajpt1 = open('bot_files/pentatonics/p_pent/f-major-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            Fmajpt2 = open('bot_files/pentatonics/g_pent/F-Major Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, Fmajpt1)
+            bot.send_photo(call.message.chat.id, Fmajpt2)
+            Fmajpt1.close()
+            Fmajpt2.close()
+
+    if call.message:
+        if call.data == 'MinorFpt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали F minor (Фа минор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали F minor (Фа минор)")
+
+            Fmpt1 = open('bot_files/pentatonics/p_pent/f-minor-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            Fmpt2 = open('bot_files/pentatonics/g_pent/F-Minor Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, Fmpt1)
+            bot.send_photo(call.message.chat.id, Fmpt2)
+            Fmpt1.close()
+            Fmpt2.close()
+
+    if call.message:
+        if call.data == 'F#pt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали F# (Фа диез)')
+
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали F# (Фа диез)")
+
+            Pentmarkup = types.InlineKeyboardMarkup(row_width=2)
+            Pent1 = types.InlineKeyboardButton("Major", callback_data="MajorF#pt")
+            Pent2 = types.InlineKeyboardButton("Minor", callback_data="MinorF#pt")
+
+            Pentmarkup.add(Pent1, Pent2)
+
+            bot.send_message(call.message.chat.id, 'Выберите лад', reply_markup=Pentmarkup)
+
+    if call.message:
+        if call.data == 'MajorF#pt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали F# major (Фа диез мажор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали F# major (Фа диез мажор)")
+
+            Gbmajpt1 = open('bot_files/pentatonics/p_pent/f-sharp-major-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            Gbmajpt2 = open('bot_files/pentatonics/g_pent/Fsharp-Major Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, Gbmajpt1)
+            bot.send_photo(call.message.chat.id, Gbmajpt2)
+            Gbmajpt1.close()
+            Gbmajpt2.close()
+
+    if call.message:
+        if call.data == 'MinorF#pt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали F# minor (Фа диез минор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали F# minor (Фа диез минор)")
+
+            Gbmpt1 = open('bot_files/pentatonics/p_pent/f-sharp-minor-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            Gbmpt2 = open('bot_files/pentatonics/g_pent/Fsharp-Minor Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, Gbmpt1)
+            bot.send_photo(call.message.chat.id, Gbmpt2)
+            Gbmpt1.close()
+            Gbmpt2.close()
+
+    if call.message:
+        if call.data == 'Gpt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали G (Соль)')
+
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали G (Соль)")
+
+            Pentmarkup = types.InlineKeyboardMarkup(row_width=2)
+            Pent1 = types.InlineKeyboardButton("Major", callback_data="MajorGpt")
+            Pent2 = types.InlineKeyboardButton("Minor", callback_data="MinorGpt")
+
+            Pentmarkup.add(Pent1, Pent2)
+
+            bot.send_message(call.message.chat.id, 'Выберите лад', reply_markup=Pentmarkup)
+
+    if call.message:
+        if call.data == 'MajorGpt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали G major (Соль мажор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали G major (Соль мажор)")
+
+            Gmajpt1 = open('bot_files/pentatonics/p_pent/g-major-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            Gmajpt2 = open('bot_files/pentatonics/g_pent/G-Major Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, Gmajpt1)
+            bot.send_photo(call.message.chat.id, Gmajpt2)
+            Gmajpt1.close()
+            Gmajpt2.close()
+
+    if call.message:
+        if call.data == 'MinorGpt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали G minor (Соль минор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали G minor (Соль минор)")
+
+            Gmpt1 = open('bot_files/pentatonics/p_pent/g-minor-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            Gmpt2 = open('bot_files/pentatonics/g_pent/G-Minor Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, Gmpt1)
+            bot.send_photo(call.message.chat.id, Gmpt2)
+            Gmpt1.close()
+            Gmpt2.close()
+
+    if call.message:
+        if call.data == 'G#pt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали G# (Соль диез)')
+
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                      text="Вы выбрали G# (Соль диез)")
+
+            Pentmarkup = types.InlineKeyboardMarkup(row_width=2)
+            Pent1 = types.InlineKeyboardButton("Major", callback_data="MajorG#pt")
+            Pent2 = types.InlineKeyboardButton("Minor", callback_data="MinorG#pt")
+
+            Pentmarkup.add(Pent1, Pent2)
+
+            bot.send_message(call.message.chat.id, 'Выберите лад', reply_markup=Pentmarkup)
+
+    if call.message:
+        if call.data == 'MajorG#pt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали G# major (Соль диез мажор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали G# major (Соль диез мажор)")
+
+            Abmajpt1 = open('bot_files/pentatonics/p_pent/g-sharp-major-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            Abmajpt2 = open('bot_files/pentatonics/g_pent/Gsharp-Major Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, Abmajpt1)
+            bot.send_photo(call.message.chat.id, Abmajpt2)
+            Abmajpt1.close()
+            Abmajpt2.close()
+
+    if call.message:
+        if call.data == 'MinorG#pt':
+            bot.send_message(call.message.chat.id, 'Вы выбрали G# minor (Соль диез минор)')
+            bot.answer_callback_query(callback_query_id=call.id, show_alert=False,
+                                          text="Вы выбрали G# minor (Соль диез минор)")
+
+            Abmpt1 = open('bot_files/pentatonics/p_pent/g-sharp-minor-pentatonic-scale-on-piano-keyboard.png', 'rb')
+            Abmpt2 = open('bot_files/pentatonics/g_pent/Gsharp-Minor Pentatonic.png', 'rb')
+            bot.send_photo(call.message.chat.id, Abmpt1)
+            bot.send_photo(call.message.chat.id, Abmpt2)
+            Abmpt1.close()
+            Abmpt2.close()
+
+
+
+            
+ 
 @bot.message_handler(commands=['g_chords'])
 def g_chord_rus(message):
     bot.send_message(message.chat.id, 'Функция находится в разработке')
